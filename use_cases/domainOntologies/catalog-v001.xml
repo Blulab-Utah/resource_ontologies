@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/colonoscopy.owl" uri="colonoscopy.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/i2b2-2014.owl" uri="i2b2-2014.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/influenza.owl" uri="influenza.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/pneumonia.owl" uri="pneumonia.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/readmission.owl" uri="readmission.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/reasonForExam.owl" uri="reasonForExam.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://blulab.chpc.utah.edu/ontologies/examples/test.owl" uri="test.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1431379325702" name="http://www.ontologies.com/hsrd.owl" uri="hsrd.owl"/>
+    </group>
+</catalog>

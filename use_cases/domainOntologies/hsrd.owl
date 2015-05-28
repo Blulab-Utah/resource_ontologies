@@ -1,0 +1,476 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.ontologies.com/hsrd.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.ontologies.com/hsrd.owl">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/SchemaOntology.owl</Import>
+    <SubClassOf>
+        <Class IRI="#Carotid_Endarterectomy"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/SchemaOntology.owl#ProcedureIntervention"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carotid_Endarterectomy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/SchemaOntology.owl#hasLingAttribute"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl#Before_DocTimeRel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carotid_Endarterectomy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/SchemaOntology.owl#hasLingAttribute"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl#DefiniteExistence_Certainty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carotid_Endarterectomy"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/SchemaOntology.owl#hasLingAttribute"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl#Patient_Experiencer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery"/>
+        <Class IRI="#Carotid_Endarterectomy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Endarterectomy_of_common_carotid_artery"/>
+        <Class IRI="#Carotid_Endarterectomy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Endarterectomy_of_external_carotid_artery"/>
+        <Class IRI="#Carotid_Endarterectomy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Endarterectomy_of_internal_carotid_artery"/>
+        <Class IRI="#Carotid_Endarterectomy"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis"/>
+        <Class IRI="#Endarterectomy_of_internal_carotid_artery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Percutaneous_endarterectomy_of_common_carotid_artery"/>
+        <Class IRI="#Endarterectomy_of_common_carotid_artery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Percutaneous_endarterectomy_of_external_carotid_artery"/>
+        <Class IRI="#Endarterectomy_of_external_carotid_artery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Percutaneous_endarterectomy_of_internal_carotid_artery"/>
+        <Class IRI="#Endarterectomy_of_internal_carotid_artery"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision"/>
+        <Class IRI="#Carotid_Endarterectomy"/>
+    </SubClassOf>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">CAROTID ENDARTERECTOMY</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">CEA - Carotid endarterectomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid Endarterectomies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid Endarterectomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid endarterectomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid endarterectomy (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid thromboendarterectomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomies, Carotid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy, Carotid</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#definition"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">The excision of the thickened, atheromatous tunica intima of a carotid artery.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">10007692 [MDR]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">158 [COSTAR]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">66951008 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">8 [MEDLINEPLUS]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">C0014099</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">D016894 [MSH]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">NOCODE [MTH]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Carotid_Endarterectomy</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid Endarterectomy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Carotid endarterectomy and patch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Coronary artery endarterectomy with patch graft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Coronary endarterectomy with patch graft</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of carotid artery and patch repair of carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of carotid artery and patch repair of carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">175367001 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">36.03 [MTHICD9]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0397710</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Endarterectomy_of_carotid_artery_and_patch_repair_of_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of carotid artery and patch repair of carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of common carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of common carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">233298008 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0397713</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of common carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of external carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of external carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">233297003 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0397712</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of external carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">233296007 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0397711</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery with eversion and end-to-end anastomosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery with eversion and end-to-end anastomosis (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">405412009 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">C1320889</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Endarterectomy_of_internal_carotid_artery_with_eversion_and_end_to_end_anastomosis</IRI>
+        <Literal datatypeIRI="&xsd;string">Endarterectomy of internal carotid artery with eversion and end-to-end anastomosis</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of common carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of common carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">276951007 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0456298</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Percutaneous_endarterectomy_of_common_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of common carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of external carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of external carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">276950008 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0456297</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Percutaneous_endarterectomy_of_external_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of external carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of internal carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of internal carotid artery (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">276949008 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">C0456296</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Percutaneous_endarterectomy_of_internal_carotid_artery</IRI>
+        <Literal datatypeIRI="&xsd;string">Percutaneous endarterectomy of internal carotid artery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#SemanticType"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">Therapeutic or Preventive Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">Thromboendarterectomy with graft of carotid artery by neck incision</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#altLabel"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">Thromboendarterectomy with graft of carotid artery by neck incision (procedure)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">15023006 [SNOMEDCT_US]</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="#prefCUI"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">C0190472</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Thromboendarterectomy_with_graft_of_carotid_artery_by_neck_incision</IRI>
+        <Literal datatypeIRI="&xsd;string">Thromboendarterectomy with graft of carotid artery by neck incision</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
