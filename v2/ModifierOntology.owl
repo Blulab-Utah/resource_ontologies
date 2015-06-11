@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/Terminology.owl</Import>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Because_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#But_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Closure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LingusiticModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Modifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumericModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Patient_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhenotypeModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Presentation_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecondaryTo_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TemporalModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnitModifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Which_ClosureGroup"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEnAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSvAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumericValue"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Because_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#But_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LingusiticModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumericModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhenotypeModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Presentation_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecondaryTo_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TemporalModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnitModifier"/>
+        <Class IRI="#Modifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Which_ClosureGroup"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Because_ClosureGroup"/>
+        <Class IRI="#But_ClosureGroup"/>
+        <Class IRI="#Patient_ClosureGroup"/>
+        <Class IRI="#Presentation_ClosureGroup"/>
+        <Class IRI="#SecondaryTo_ClosureGroup"/>
+        <Class IRI="#Which_ClosureGroup"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeAction"/>
+        <ObjectProperty IRI="#hasAction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEnAction"/>
+        <ObjectProperty IRI="#hasAction"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSvAction"/>
+        <ObjectProperty IRI="#hasAction"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasAction"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDeAction"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasEnAction"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSvAction"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAction"/>
+        <Class IRI="#Closure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAction"/>
+        <Class IRI="#Modifier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#NumericModifier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAction"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#UnitModifier"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasNumericValue"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasNumericValue"/>
+        <Class IRI="#NumericModifier"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasNumericValue"/>
+        <DataUnionOf>
+            <Datatype abbreviatedIRI="xsd:float"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataUnionOf>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
