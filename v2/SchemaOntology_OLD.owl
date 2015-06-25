@@ -28,6 +28,12 @@
         <Class IRI="#AnatomicalSite"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Annotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Composition"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
@@ -58,10 +64,16 @@
         <Class IRI="#Patient"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Phenotype"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ProcedureIntervention"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SignSymptom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifier"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#AllergyIntolerance"/>
@@ -72,6 +84,10 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Composition"/>
+        <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Condition"/>
         <Class IRI="#Event"/>
     </SubClassOf>
@@ -81,7 +97,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Element"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Encounter"/>
@@ -112,6 +128,10 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Phenotype"/>
+        <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ProcedureIntervention"/>
         <Class IRI="#Event"/>
     </SubClassOf>
@@ -119,6 +139,10 @@
         <Class IRI="#SignSymptom"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ModifierOntology.owl#Modifier"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 

@@ -16,11 +16,12 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://blulab.chpc.utah.edu/ontologies/modifierLibrary/Temporality.owl">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Import>http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl</Import>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/v2/ModifierOntology.owl</Import>
     <Declaration>
         <Class IRI="#After"/>
     </Declaration>
@@ -54,7 +55,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Temporality"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/ModifierOntology.owl#LingusiticModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ModifierOntology.owl#LingusiticModifier"/>
     </SubClassOf>
 </Ontology>
 
