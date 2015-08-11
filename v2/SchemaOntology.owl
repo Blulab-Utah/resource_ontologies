@@ -224,6 +224,87 @@
         <Class IRI="#Unit"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#adjacent_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#analyzes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#assesses_effect_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#associated_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#before"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#begins_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#branch_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#brings_about"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#carries_out"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#causes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#complicates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptual_part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#connected_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consists_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contains_temporally"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#degree_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#derivative_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#developmental_form_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#diagnoses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#disrupts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ends_on"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#evaluation_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#exhibits"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAttribute"/>
     </Declaration>
     <Declaration>
@@ -243,6 +324,93 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#indicates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ingredient_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interacts_with"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interconnects"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#issue_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#location_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manages"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manifestation_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measurement_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#measures"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#method_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#occurs_in"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#overlap"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#part_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#performs"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#practices"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#prevents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#process_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#produces"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#property_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#result_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spatially_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#surrounds"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#traverses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#treats"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tributary_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#uses"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Age"/>
@@ -505,6 +673,114 @@
         <Class IRI="#NumericAttribute"/>
     </SubClassOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#adjacent_to"/>
+        <ObjectProperty IRI="#spatially_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#affects"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#analyzes"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#assesses_effect_of"/>
+        <ObjectProperty IRI="#analyzes"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#associated_with"/>
+        <ObjectProperty IRI="#hasRelation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#before"/>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#begins_on"/>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#branch_of"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#brings_about"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#carries_out"/>
+        <ObjectProperty IRI="#performs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#causes"/>
+        <ObjectProperty IRI="#brings_about"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#complicates"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptual_part_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+        <ObjectProperty IRI="#associated_with"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#connected_to"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#consists_of"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contains"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contains_temporally"/>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#degree_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#derivative_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#developmental_form_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#diagnoses"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#disrupts"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ends_on"/>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#evaluation_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#exhibits"/>
+        <ObjectProperty IRI="#performs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#functionally_related_to"/>
+        <ObjectProperty IRI="#associated_with"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
@@ -524,6 +800,130 @@
         <ObjectProperty IRI="#hasSemanticAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#indicates"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ingredient_of"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interacts_with"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interconnects"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#issue_in"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#location_of"/>
+        <ObjectProperty IRI="#spatially_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#manages"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#manifestation_of"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#measurement_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#measures"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#method_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#occurs_in"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#overlap"/>
+        <ObjectProperty IRI="#temporally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#part_of"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#performs"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#physically_related_to"/>
+        <ObjectProperty IRI="#associated_with"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#practices"/>
+        <ObjectProperty IRI="#performs"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#prevents"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#process_of"/>
+        <ObjectProperty IRI="#occurs_in"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#produces"/>
+        <ObjectProperty IRI="#brings_about"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#property_of"/>
+        <ObjectProperty IRI="#conceptually_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#result_of"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spatially_related_to"/>
+        <ObjectProperty IRI="#associated_with"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#surrounds"/>
+        <ObjectProperty IRI="#spatially_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temporally_related_to"/>
+        <ObjectProperty IRI="#associated_with"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#traverses"/>
+        <ObjectProperty IRI="#spatially_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#treats"/>
+        <ObjectProperty IRI="#affects"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#tributary_of"/>
+        <ObjectProperty IRI="#physically_related_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#uses"/>
+        <ObjectProperty IRI="#functionally_related_to"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRelation"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Element</IRI>
