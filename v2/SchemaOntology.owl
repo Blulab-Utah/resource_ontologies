@@ -11,16 +11,23 @@
 
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://blulab.chpc.utah.edu/ontologies/v2/SchemaOntology.owl"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://blulab.chpc.utah.edu/ontologies/v2/SchemaOntology.owl">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Import>http://blulab.chpc.utah.edu/ontologies/v2/ModifierOntology.owl</Import>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/Terminology.owl</Import>
+    <Declaration>
+        <Class IRI="#Age"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Allergen"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#AllergyIntolerance"/>
     </Declaration>
@@ -28,10 +35,58 @@
         <Class IRI="#AnatomicalSite"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Annotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodyQualifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodySide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Certainty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Composition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CompositionAttribute"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ContextualAspect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContextualModality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Degree"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeltaFlag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DimensionalMeasurement"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DiseaseDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dosage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DosageQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DurationQuantity"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Element"/>
@@ -43,26 +98,160 @@
         <Class IRI="#Entity"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Episode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ethnicity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Experiencer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Finding"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LinguisticAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaritalStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicationForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicationRoute"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MedicationStatement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MedicationStrength"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NumericAttribute"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Observation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ObservationValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OrdinalInterpretation"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Patient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Permanence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Phenotype"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhenotypeAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProcedureCompletionStatus"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ProcedureIntervention"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ProcedureInterventionDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProcedureInterventionMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Race"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Range_FHIR"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ratio"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensitivityType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Severity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#SignSymptom"/>
     </Declaration>
+    <Declaration>
+        <Class IRI="#SocialRiskQualifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialRiskQuantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialRiskStatus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StatusChange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temporality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Unit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRelation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Age"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Allergen"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AllergyIntolerance"/>
         <Class IRI="#Entity"/>
@@ -72,16 +261,72 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BodyQualifier"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySide"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Certainty"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composition"/>
+        <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CompositionAttribute"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Condition"/>
         <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContextualAspect"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContextualModality"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Course"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Degree"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeltaFlag"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DimensionalMeasurement"/>
+        <Class IRI="#NumericAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DiseaseDisorder"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Dosage"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DosageQuantity"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DurationQuantity"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Element"/>
-        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Encounter"/>
@@ -92,36 +337,201 @@
         <Class IRI="#Element"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Episode"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ethnicity"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Event"/>
         <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Experiencer"/>
+        <Class IRI="#LinguisticAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Finding"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Gender"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LinguisticAttribute"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaritalStatus"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationForm"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationRoute"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MedicationStatement"/>
         <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStrength"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NumericAttribute"/>
+        <Class IRI="#Attribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Observation"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ObservationValue"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OrdinalInterpretation"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Patient"/>
         <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Permanence"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Phenotype"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhenotypeAttribute"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Polarity"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureCompletionStatus"/>
+        <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProcedureIntervention"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ProcedureInterventionDevice"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureInterventionMethod"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quality"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quantity"/>
+        <Class IRI="#NumericAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Race"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Range_FHIR"/>
+        <Class IRI="#NumericAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ratio"/>
+        <Class IRI="#NumericAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticAttribute"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensitivityType"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Severity"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SignSymptom"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialRiskQualifier"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialRiskQuantity"/>
+        <Class IRI="#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialRiskStatus"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stage"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StatusChange"/>
+        <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temporality"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Unit"/>
+        <Class IRI="#NumericAttribute"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Element</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Mention</Literal>
+    </AnnotationAssertion>
 </Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
