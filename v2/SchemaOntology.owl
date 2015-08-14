@@ -56,6 +56,9 @@
         <Class IRI="#CompositionAttribute"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CompositionEvent"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
@@ -78,6 +81,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DiseaseDisorder"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentOntology"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentSection"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Dosage"/>
@@ -308,7 +317,40 @@
         <ObjectProperty IRI="#hasAttribute"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCertainty"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContextualAspect"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasContextualModality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDegree"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDenominator"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDetail"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDocType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEvent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasExperiencer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasHighQuantity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
@@ -317,13 +359,31 @@
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasPermanence"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPolarity"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasSection"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSectionType"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTemporality"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasUnit"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#indicates"/>
@@ -449,6 +509,10 @@
         <Class IRI="#Attribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CompositionEvent"/>
+        <Class IRI="#CompositionAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Condition"/>
         <Class IRI="#Event"/>
     </SubClassOf>
@@ -479,6 +543,14 @@
     <SubClassOf>
         <Class IRI="#DiseaseDisorder"/>
         <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentOntology"/>
+        <Class IRI="#CompositionAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentSection"/>
+        <Class IRI="#CompositionAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dosage"/>
@@ -781,8 +853,52 @@
         <ObjectProperty IRI="#associated_with"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCertainty"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContent"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContextualAspect"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasContextualModality"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDegree"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDenominator"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDetail"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDocType"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEvent"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasExperiencer"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasHighQuantity"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
@@ -793,12 +909,36 @@
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPermanence"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPolarity"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSection"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSectionType"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTemporality"/>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasUnit"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#indicates"/>
@@ -917,12 +1057,192 @@
         <ObjectProperty IRI="#functionally_related_to"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCertainty"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <Class IRI="#CompositionAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContent"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContent"/>
+        <Class IRI="#DocumentSection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContextualAspect"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasContextualModality"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDegree"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDenominator"/>
+        <Class IRI="#Ratio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDetail"/>
+        <Class IRI="#CompositionEvent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDocType"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEvent"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExperiencer"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasHighQuantity"/>
+        <Class IRI="#Range_FHIR"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <Class IRI="#NumericAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPermanence"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPolarity"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSection"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSection"/>
+        <Class IRI="#DocumentSection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSectionType"/>
+        <Class IRI="#DocumentSection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTemporality"/>
+        <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#NumericAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAttribute"/>
+        <Class IRI="#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCertainty"/>
+        <Class IRI="#Certainty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <Class IRI="#CompositionAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContent"/>
+        <Class IRI="#Element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContextualAspect"/>
+        <Class IRI="#ContextualAspect"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasContextualModality"/>
+        <Class IRI="#ContextualModality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDegree"/>
+        <Class IRI="#Degree"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDenominator"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDetail"/>
+        <Class IRI="#Element"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDocType"/>
+        <Class IRI="#DocumentOntology"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEvent"/>
+        <Class IRI="#CompositionEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExperiencer"/>
+        <Class IRI="#Experiencer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasHighQuantity"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <Class IRI="#LinguisticAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <Class IRI="#NumericAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPermanence"/>
+        <Class IRI="#Permanence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPolarity"/>
+        <Class IRI="#Polarity"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSection"/>
+        <Class IRI="#DocumentSection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTemporality"/>
+        <Class IRI="#Temporality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasUnit"/>
+        <Class IRI="#Unit"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
