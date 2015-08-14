@@ -314,6 +314,18 @@
         <ObjectProperty IRI="#functionally_related_to"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#has1dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has2dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has3dimension"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAgeRange"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAttribute"/>
     </Declaration>
     <Declaration>
@@ -344,6 +356,9 @@
         <ObjectProperty IRI="#hasDocType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDosageQuantity"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasEvent"/>
     </Declaration>
     <Declaration>
@@ -356,6 +371,9 @@
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasLowQuantity"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </Declaration>
     <Declaration>
@@ -366,6 +384,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPolarity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRate"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
@@ -853,6 +874,22 @@
         <ObjectProperty IRI="#associated_with"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has1dimension"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has2dimension"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#has3dimension"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgeRange"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCertainty"/>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
     </SubObjectPropertyOf>
@@ -889,6 +926,10 @@
         <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDosageQuantity"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEvent"/>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
@@ -905,6 +946,10 @@
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasLowQuantity"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumericAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
@@ -919,6 +964,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPolarity"/>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRate"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSection"/>
@@ -1057,6 +1106,18 @@
         <ObjectProperty IRI="#functionally_related_to"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has1dimension"/>
+        <Class IRI="#DimensionalMeasurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has2dimension"/>
+        <Class IRI="#DimensionalMeasurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has3dimension"/>
+        <Class IRI="#DimensionalMeasurement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAttribute"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
@@ -1105,6 +1166,10 @@
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDosageQuantity"/>
+        <Class IRI="#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEvent"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
@@ -1121,6 +1186,10 @@
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasLowQuantity"/>
+        <Class IRI="#Range_FHIR"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumericAttribute"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
@@ -1135,6 +1204,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPolarity"/>
         <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRate"/>
+        <Class IRI="#Dosage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelation"/>
@@ -1160,6 +1233,18 @@
         <ObjectProperty IRI="#hasUnit"/>
         <Class IRI="#NumericAttribute"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has1dimension"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has2dimension"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has3dimension"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAttribute"/>
         <Class IRI="#Attribute"/>
@@ -1201,6 +1286,10 @@
         <Class IRI="#DocumentOntology"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDosageQuantity"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
         <Class IRI="#CompositionEvent"/>
     </ObjectPropertyRange>
@@ -1217,6 +1306,10 @@
         <Class IRI="#LinguisticAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasLowQuantity"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNumericAttribute"/>
         <Class IRI="#NumericAttribute"/>
     </ObjectPropertyRange>
@@ -1227,6 +1320,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPolarity"/>
         <Class IRI="#Polarity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRate"/>
+        <Class IRI="#Ratio"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
