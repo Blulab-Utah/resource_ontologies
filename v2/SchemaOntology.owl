@@ -323,13 +323,34 @@
         <ObjectProperty IRI="#has3dimension"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasAgeAbatement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAgeOnset"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAgeRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAllergen"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAttribute"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBodyQualifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBodySide"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCertainty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCompletionStatus"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
@@ -347,22 +368,37 @@
         <ObjectProperty IRI="#hasDegree"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDeltaFlag"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDenominator"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasDetail"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDevice"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDocType"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasDosage"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDosageQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEncounter"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEvent"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasExperiencer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasForm"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasHighQuantity"/>
@@ -372,6 +408,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLowQuantity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasNumerator"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasNumericAttribute"/>
@@ -886,12 +925,40 @@
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgeAbatement"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAgeOnset"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeRange"/>
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasAllergen"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBodyQualifier"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasBodySide"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCertainty"/>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCompletionStatus"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
@@ -914,6 +981,10 @@
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeltaFlag"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDenominator"/>
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
@@ -922,12 +993,24 @@
         <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDevice"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDocType"/>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDosage"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosageQuantity"/>
         <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEncounter"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEvent"/>
@@ -936,6 +1019,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasExperiencer"/>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasForm"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasHighQuantity"/>
@@ -947,6 +1034,10 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLowQuantity"/>
+        <ObjectProperty IRI="#hasNumericAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasNumerator"/>
         <ObjectProperty IRI="#hasNumericAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1118,12 +1209,52 @@
         <Class IRI="#DimensionalMeasurement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAgeAbatement"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAgeOnset"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAllergen"/>
+        <Class IRI="#AllergyIntolerance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAttribute"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <Class IRI="#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <Class IRI="#Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <Class IRI="#ProcedureIntervention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodyQualifier"/>
+        <Class IRI="#AnatomicalSite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBodySide"/>
+        <Class IRI="#AnatomicalSite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCertainty"/>
         <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCompletionStatus"/>
+        <Class IRI="#ProcedureIntervention"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
@@ -1154,6 +1285,14 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeltaFlag"/>
+        <Class IRI="#Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDeltaFlag"/>
+        <Class IRI="#ProcedureIntervention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDenominator"/>
         <Class IRI="#Ratio"/>
     </ObjectPropertyDomain>
@@ -1162,12 +1301,28 @@
         <Class IRI="#CompositionEvent"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDevice"/>
+        <Class IRI="#ProcedureIntervention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDocType"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDosage"/>
+        <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDosageQuantity"/>
         <Class IRI="#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEncounter"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEncounter"/>
+        <Class IRI="#ProcedureIntervention"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEvent"/>
@@ -1190,6 +1345,10 @@
         <Class IRI="#Range_FHIR"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNumerator"/>
+        <Class IRI="#Ratio"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumericAttribute"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
@@ -1200,6 +1359,14 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPermanence"/>
         <Class IRI="#Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+        <Class IRI="#Phenotype"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+        <Class IRI="#PhenotypeAttribute"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -1226,6 +1393,14 @@
         <Class IRI="#DocumentSection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <Class IRI="#SemanticAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTemporality"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
@@ -1246,12 +1421,40 @@
         <Class IRI="#Quantity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAgeAbatement"/>
+        <Class IRI="#Age"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAgeOnset"/>
+        <Class IRI="#Age"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasAllergen"/>
+        <Class IRI="#Allergen"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAttribute"/>
         <Class IRI="#Attribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodyLocation"/>
+        <Class IRI="#AnatomicalSite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodyQualifier"/>
+        <Class IRI="#BodyQualifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodySide"/>
+        <Class IRI="#BodySide"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCertainty"/>
         <Class IRI="#Certainty"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCompletionStatus"/>
+        <Class IRI="#ProcedureCompletionStatus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
@@ -1274,6 +1477,10 @@
         <Class IRI="#Degree"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDeltaFlag"/>
+        <Class IRI="#DeltaFlag"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDenominator"/>
         <Class IRI="#Quantity"/>
     </ObjectPropertyRange>
@@ -1282,12 +1489,24 @@
         <Class IRI="#Element"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDevice"/>
+        <Class IRI="#ProcedureInterventionDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDocType"/>
         <Class IRI="#DocumentOntology"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDosage"/>
+        <Class IRI="#Dosage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDosageQuantity"/>
         <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEncounter"/>
+        <Class IRI="#Encounter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
@@ -1310,12 +1529,20 @@
         <Class IRI="#Quantity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasNumerator"/>
+        <Class IRI="#Quantity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNumericAttribute"/>
         <Class IRI="#NumericAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPermanence"/>
         <Class IRI="#Permanence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
+        <Class IRI="#PhenotypeAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -1332,6 +1559,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSection"/>
         <Class IRI="#DocumentSection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <Class IRI="#SemanticAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTemporality"/>
