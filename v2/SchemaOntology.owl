@@ -681,6 +681,20 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AnatomicalSite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyQualifier"/>
+            <Class IRI="#BodyQualifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AnatomicalSite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySide"/>
+            <Class IRI="#BodySide"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BodyQualifier"/>
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
