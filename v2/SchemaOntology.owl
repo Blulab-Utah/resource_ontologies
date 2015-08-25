@@ -656,6 +656,27 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAllergen"/>
+            <Class IRI="#Allergen"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSensitivityType"/>
+            <Class IRI="#SensitivityType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSeverity"/>
+            <Class IRI="#Severity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#AnatomicalSite"/>
         <Class IRI="#Entity"/>
     </SubClassOf>
