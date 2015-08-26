@@ -134,6 +134,9 @@
         <Class IRI="#MaritalStatus"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Medication"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MedicationForm"/>
     </Declaration>
     <Declaration>
@@ -896,6 +899,24 @@
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Medication"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasForm"/>
+            <Class IRI="#MedicationForm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medication"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#isBrand"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MedicationForm"/>
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
@@ -930,6 +951,48 @@
     <SubClassOf>
         <Class IRI="#Patient"/>
         <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="#Gender"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMaritalStatus"/>
+            <Class IRI="#MaritalStatus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasName"/>
+            <Class IRI="#HumanName"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasBirthDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDeathDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#isDeceased"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Permanence"/>
@@ -1608,6 +1671,10 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasForm"/>
+        <Class IRI="#Medication"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasGender"/>
         <Class IRI="#Patient"/>
     </ObjectPropertyDomain>
@@ -1848,6 +1915,10 @@
         <Class IRI="#Experiencer"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasForm"/>
+        <Class IRI="#MedicationForm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasGender"/>
         <Class IRI="#Gender"/>
     </ObjectPropertyRange>
@@ -2065,6 +2136,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasToLocation"/>
         <Class IRI="#Encounter"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#isBrand"/>
+        <Class IRI="#Medication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#isDeceased"/>
