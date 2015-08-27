@@ -368,6 +368,9 @@
         <ObjectProperty IRI="#hasContextualModality"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCourse"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDegree"/>
     </Declaration>
     <Declaration>
@@ -480,6 +483,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasStatusChange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSubject"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTemporality"/>
@@ -646,6 +652,34 @@
     <Declaration>
         <DataProperty IRI="#wasNotGiven"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DiseaseDisorder"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasConditionCategory"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">diagnosis</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Finding"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasConditionCategory"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">finding</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SignSymptom"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasConditionCategory"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">complaint</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">symptom</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Age"/>
         <Class IRI="#Quantity"/>
@@ -750,8 +784,85 @@
         <Class IRI="#CompositionAttribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CompositionEvent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEvent"/>
+            <Class IRI="#Element"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Condition"/>
         <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAgeAbatement"/>
+            <Class IRI="#Age"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasAgeOnset"/>
+            <Class IRI="#Age"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyLocation"/>
+            <Class IRI="#AnatomicalSite"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCourse"/>
+            <Class IRI="#Course"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEncounter"/>
+            <Class IRI="#Encounter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSeverity"/>
+            <Class IRI="#Severity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStage"/>
+            <Class IRI="#Stage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubject"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAbatementBoolean"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasConditionCategory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ContextualAspect"/>
@@ -778,6 +889,27 @@
         <Class IRI="#NumericAttribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DimensionalMeasurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has1dimension"/>
+            <Class IRI="#Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DimensionalMeasurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has2dimension"/>
+            <Class IRI="#Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DimensionalMeasurement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#has3dimension"/>
+            <Class IRI="#Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DiseaseDisorder"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
@@ -790,8 +922,43 @@
         <Class IRI="#CompositionAttribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DocumentSection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasContent"/>
+            <Class IRI="#Element"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Dosage"/>
         <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasNumValue"/>
+            <Class IRI="#Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRate"/>
+            <Class IRI="#Ratio"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRoute"/>
+            <Class IRI="#MedicationRoute"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dosage"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#asNeededBoolean"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#DosageQuantity"/>
@@ -808,6 +975,20 @@
     <SubClassOf>
         <Class IRI="#Encounter"/>
         <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Encounter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasFromLocation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Encounter"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasToLocation"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Entity"/>
@@ -891,6 +1072,48 @@
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasFirstName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasFullName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasLastName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasMiddleName"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNamePrefix"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanName"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNameSuffix"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#LinguisticAttribute"/>
         <Class IRI="#Attribute"/>
     </SubClassOf>
@@ -929,6 +1152,41 @@
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDosage"/>
+            <Class IRI="#Dosage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMedication"/>
+            <Class IRI="#Medication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStatusChange"/>
+            <Class IRI="#StatusChange"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubject"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#wasNotGiven"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MedicationStrength"/>
         <Class IRI="#Quantity"/>
     </SubClassOf>
@@ -939,6 +1197,45 @@
     <SubClassOf>
         <Class IRI="#Observation"/>
         <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyLocation"/>
+            <Class IRI="#AnatomicalSite"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDeltaFlag"/>
+            <Class IRI="#DeltaFlag"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInterpretation"/>
+            <Class IRI="#OrdinalInterpretation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMethod"/>
+            <Class IRI="#ProcedureIntervention"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasNumValue"/>
+            <ObjectUnionOf>
+                <Class IRI="#Quantity"/>
+                <Class IRI="#Range_FHIR"/>
+                <Class IRI="#Ratio"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ObservationValue"/>
@@ -1019,6 +1316,55 @@
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyLocation"/>
+            <Class IRI="#AnatomicalSite"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCompletionStatus"/>
+            <Class IRI="#ProcedureCompletionStatus"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDeltaFlag"/>
+            <Class IRI="#DeltaFlag"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDevice"/>
+            <Class IRI="#ProcedureInterventionDevice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEncounter"/>
+            <Class IRI="#Encounter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubject"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureIntervention"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasProcedureCategory"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ProcedureInterventionDevice"/>
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
@@ -1033,6 +1379,20 @@
     <SubClassOf>
         <Class IRI="#Quantity"/>
         <Class IRI="#NumericAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quantity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasUnit"/>
+            <Class IRI="#Unit"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quantity"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasQuantityValue"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Race"/>
@@ -1263,6 +1623,10 @@
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCourse"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDegree"/>
         <ObjectProperty IRI="#hasLinguisticAttribute"/>
     </SubObjectPropertyOf>
@@ -1408,6 +1772,10 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasStatusChange"/>
+        <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSubject"/>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1619,6 +1987,10 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCourse"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDegree"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
@@ -1712,6 +2084,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumValue"/>
+        <Class IRI="#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasNumValue"/>
         <Class IRI="#Observation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1799,6 +2175,18 @@
         <Class IRI="#MedicationStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#ProcedureIntervention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTemporality"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
@@ -1869,6 +2257,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContextualModality"/>
         <Class IRI="#ContextualModality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCourse"/>
+        <Class IRI="#Course"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDegree"/>
@@ -1943,6 +2335,10 @@
         <Class IRI="#MaritalStatus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedication"/>
+        <Class IRI="#Medication"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
         <Class IRI="#ProcedureIntervention"/>
     </ObjectPropertyRange>
@@ -2009,6 +2405,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStatusChange"/>
         <Class IRI="#StatusChange"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Patient"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasTemporality"/>
