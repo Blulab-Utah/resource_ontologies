@@ -114,6 +114,12 @@
         <Class IRI="#Episode"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#EpisodeAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EpisodeType"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Ethnicity"/>
     </Declaration>
     <Declaration>
@@ -360,6 +366,9 @@
         <ObjectProperty IRI="#hasCompletionStatus"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasComposition"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
     </Declaration>
     <Declaration>
@@ -400,6 +409,12 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEncounter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEpisodeType"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEvent"/>
@@ -640,6 +655,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasQuantityValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasSpan"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasTitle"/>
@@ -980,6 +998,13 @@
         <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Element"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSpan"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Encounter"/>
         <Class IRI="#Event"/>
     </SubClassOf>
@@ -1004,6 +1029,28 @@
     <SubClassOf>
         <Class IRI="#Episode"/>
         <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Episode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComposition"/>
+            <Class IRI="#Composition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Episode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEpisodeType"/>
+            <Class IRI="#EpisodeType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EpisodeAttribute"/>
+        <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EpisodeType"/>
+        <Class IRI="#EpisodeAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ethnicity"/>
@@ -1614,6 +1661,10 @@
         <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasComposition"/>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
         <ObjectProperty IRI="#hasAttribute"/>
     </SubObjectPropertyOf>
@@ -1668,6 +1719,14 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEncounter"/>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+        <ObjectProperty IRI="#hasAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEpisodeType"/>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEvent"/>
@@ -1970,6 +2029,10 @@
         <Class IRI="#ProcedureIntervention"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasComposition"/>
+        <Class IRI="#Episode"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
@@ -2040,6 +2103,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEncounter"/>
         <Class IRI="#ProcedureIntervention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEpisodeType"/>
+        <Class IRI="#Episode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEvent"/>
@@ -2250,6 +2317,10 @@
         <Class IRI="#ProcedureCompletionStatus"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasComposition"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompositionAttribute"/>
         <Class IRI="#CompositionAttribute"/>
     </ObjectPropertyRange>
@@ -2304,6 +2375,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEncounter"/>
         <Class IRI="#Encounter"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEpisodeType"/>
+        <Class IRI="#EpisodeType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
@@ -2537,6 +2612,10 @@
         <Class IRI="#Quantity"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasSpan"/>
+        <Class IRI="#Annotation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasTitle"/>
         <Class IRI="#Composition"/>
     </DataPropertyDomain>
@@ -2638,6 +2717,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasQuantityValue"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasSpan"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasTitle"/>
