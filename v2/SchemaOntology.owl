@@ -36,9 +36,6 @@
         <Class IRI="#AllergyIntolerance"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#AnatomicalSite"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Annotation"/>
     </Declaration>
     <Declaration>
@@ -49,6 +46,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#BodySide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BodySite"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Certainty"/>
@@ -186,10 +186,10 @@
         <Class IRI="#Polarity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ProcedureCompletionStatus"/>
+        <Class IRI="#Procedure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#ProcedureCompletionStatus"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ProcedureInterventionDevice"/>
@@ -739,30 +739,30 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#AnatomicalSite"/>
-        <Class IRI="#Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AnatomicalSite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodyQualifier"/>
-            <Class IRI="#BodyQualifier"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AnatomicalSite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySide"/>
-            <Class IRI="#BodySide"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#BodyQualifier"/>
         <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BodySide"/>
         <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodyQualifier"/>
+            <Class IRI="#BodyQualifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySide"/>
+            <Class IRI="#BodySide"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Certainty"/>
@@ -837,7 +837,7 @@
         <Class IRI="#Condition"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasBodyLocation"/>
-            <Class IRI="#AnatomicalSite"/>
+            <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1256,7 +1256,7 @@
         <Class IRI="#Observation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasBodyLocation"/>
-            <Class IRI="#AnatomicalSite"/>
+            <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1277,7 +1277,7 @@
         <Class IRI="#Observation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasMethod"/>
-            <Class IRI="#ProcedureIntervention"/>
+            <Class IRI="#Procedure"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1362,61 +1362,61 @@
         <Class IRI="#LinguisticAttribute"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureCompletionStatus"/>
-        <Class IRI="#SemanticAttribute"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasBodyLocation"/>
-            <Class IRI="#AnatomicalSite"/>
+            <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasCompletionStatus"/>
             <Class IRI="#ProcedureCompletionStatus"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasDeltaFlag"/>
             <Class IRI="#DeltaFlag"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasDevice"/>
             <Class IRI="#ProcedureInterventionDevice"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEncounter"/>
             <Class IRI="#Encounter"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSubject"/>
             <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasProcedureCategory"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProcedureCompletionStatus"/>
+        <Class IRI="#SemanticAttribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProcedureInterventionDevice"/>
@@ -2010,15 +2010,15 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodyLocation"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodyQualifier"/>
-        <Class IRI="#AnatomicalSite"/>
+        <Class IRI="#BodySite"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodySide"/>
-        <Class IRI="#AnatomicalSite"/>
+        <Class IRI="#BodySite"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCertainty"/>
@@ -2026,7 +2026,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompletionStatus"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasComposition"/>
@@ -2070,7 +2070,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDeltaFlag"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDenominator"/>
@@ -2082,7 +2082,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDevice"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDocType"/>
@@ -2102,7 +2102,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEncounter"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasEpisodeType"/>
@@ -2258,7 +2258,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTemporality"/>
@@ -2298,7 +2298,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyLocation"/>
-        <Class IRI="#AnatomicalSite"/>
+        <Class IRI="#BodySite"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyQualifier"/>
@@ -2422,7 +2422,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasName"/>
@@ -2605,7 +2605,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasProcedureCategory"/>
-        <Class IRI="#ProcedureIntervention"/>
+        <Class IRI="#Procedure"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasQuantityValue"/>
@@ -2742,6 +2742,11 @@
         <DataProperty IRI="#wasNotGiven"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#BodyQualifier</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">BodySiteModifier</Literal>
+    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Element</IRI>
