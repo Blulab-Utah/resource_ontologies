@@ -1,0 +1,257 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/Terminology.owl</Import>
+    <Declaration>
+        <Class IRI="#DP0000000078"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000079"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000080"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000081"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000082"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000083"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000084"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000085"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP0000000086"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000087"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000088"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000089"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000090"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000091"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000092"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000093"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000094"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000095"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP0000000096"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DP0000000081"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP0000000082"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP0000000083"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP0000000084"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP0000000085"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP0000000086"/>
+        <Class IRI="#DP0000000080"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#DP0000000081"/>
+        <Class IRI="#DP0000000082"/>
+        <Class IRI="#DP0000000083"/>
+        <Class IRI="#DP0000000084"/>
+        <Class IRI="#DP0000000085"/>
+        <Class IRI="#DP0000000086"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000088"/>
+        <ObjectProperty IRI="#DP0000000087"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000089"/>
+        <ObjectProperty IRI="#DP0000000087"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000090"/>
+        <ObjectProperty IRI="#DP0000000087"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000094"/>
+        <ObjectProperty IRI="#DP0000000093"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000095"/>
+        <ObjectProperty IRI="#DP0000000093"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#DP0000000096"/>
+        <ObjectProperty IRI="#DP0000000093"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP0000000093"/>
+        <ObjectProperty IRI="#DP0000000087"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP0000000095"/>
+        <ObjectProperty IRI="#DP0000000088"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP0000000094"/>
+        <ObjectProperty IRI="#DP0000000089"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP0000000096"/>
+        <ObjectProperty IRI="#DP0000000090"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP0000000091"/>
+        <ObjectProperty IRI="#DP0000000092"/>
+    </InverseObjectProperties>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000078</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Action</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000079</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Modifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000080</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Closure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000081</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Because_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000082</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">But_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000083</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Patient_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000084</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Presentation_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000085</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SecondaryTo_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000086</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000087</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000088</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasActionDe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000089</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasActionEn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000090</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasActionSv</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000091</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasTermination</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000092</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isTerminationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000093</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isActionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000094</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isEnActionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000095</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isDeActionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP0000000096</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSvActionOf</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+
