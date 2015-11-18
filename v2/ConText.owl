@@ -41,6 +41,36 @@
         <Class IRI="#DP000054"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DP000055"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000056"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000057"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000058"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000059"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000060"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000061"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000062"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000063"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000065"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Modifier"/>
     </Declaration>
     <Declaration>
@@ -111,6 +141,46 @@
         <Class IRI="#Modifier"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DP000055"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000056"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000057"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000058"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000059"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000060"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000061"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000062"/>
+        <Class IRI="#DP000053"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000063"/>
+        <Class IRI="#DP000054"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DP000065"/>
+        <Class IRI="#DP000054"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Patient_Group"/>
         <Class IRI="#Closure"/>
     </SubClassOf>
@@ -133,6 +203,16 @@
         <Class IRI="#Presentation_Group"/>
         <Class IRI="#SecondaryTo_Group"/>
         <Class IRI="#Which_Group"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#DP000055"/>
+        <Class IRI="#DP000056"/>
+        <Class IRI="#DP000057"/>
+        <Class IRI="#DP000058"/>
+        <Class IRI="#DP000059"/>
+        <Class IRI="#DP000060"/>
+        <Class IRI="#DP000061"/>
+        <Class IRI="#DP000062"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#DP0000000088"/>
@@ -287,6 +367,56 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DP000054</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SemanticModifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000055</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Certainty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000056</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ContextualAspect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000057</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ContextualModality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000058</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Degree</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000059</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Experiencer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000060</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Permanence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000061</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Polarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000062</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Temporality</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000063</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Allergen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000065</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Severity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
