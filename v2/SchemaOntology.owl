@@ -716,14 +716,14 @@
         <Class IRI="#AllergyIntolerance"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasAllergen"/>
-            <Class IRI="#Allergen_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000063"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AllergyIntolerance"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasSeverity"/>
-            <Class IRI="#Severity_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000065"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -742,14 +742,14 @@
         <Class IRI="#BodySite"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasBodyQualifier"/>
-            <Class IRI="#BodyQualifier_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000067"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BodySite"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasBodySide"/>
-            <Class IRI="#BodySide_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000066"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1171,7 +1171,7 @@
         <Class IRI="#Medication"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasForm"/>
-            <Class IRI="#MedicationForm_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000068"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1295,21 +1295,21 @@
         <Class IRI="#Patient"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasGender"/>
-            <Class IRI="#Gender_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000069"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Patient"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasMaritalStatus"/>
-            <Class IRI="#MaritalStatus_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000072"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Patient"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasName"/>
-            <Class IRI="#HumanName_OLD"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000073"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
