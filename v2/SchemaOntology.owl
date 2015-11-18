@@ -21,6 +21,7 @@
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl</Import>
     <Import>http://blulab.chpc.utah.edu/ontologies/Terminology.owl</Import>
     <Annotation>
         <AnnotationProperty IRI="#license"/>
@@ -73,6 +74,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Course"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DP000088"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Degree"/>
@@ -177,9 +181,6 @@
         <Class IRI="#Permanence"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Phenotype"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#PhenotypeAttribute"/>
     </Declaration>
     <Declaration>
@@ -238,6 +239,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#StatusChange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Summary"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Temporality"/>
@@ -348,9 +352,6 @@
         <ObjectProperty IRI="#hasAllergen"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasAttribute"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasBodyLocation"/>
     </Declaration>
     <Declaration>
@@ -369,7 +370,7 @@
         <ObjectProperty IRI="#hasComposition"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasContent"/>
@@ -411,7 +412,7 @@
         <ObjectProperty IRI="#hasEncounter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+        <ObjectProperty IRI="#hasEpisodeModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEpisodeType"/>
@@ -435,7 +436,7 @@
         <ObjectProperty IRI="#hasInterpretation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasLowQuantity"/>
@@ -448,6 +449,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMethod"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasName"/>
@@ -1350,10 +1354,6 @@
         <Class IRI="#LinguisticAttribute"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Phenotype"/>
-        <Class IRI="#Annotation"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#PhenotypeAttribute"/>
         <Class IRI="#Attribute"/>
     </SubClassOf>
@@ -1495,6 +1495,10 @@
     <SubClassOf>
         <Class IRI="#StatusChange"/>
         <Class IRI="#SemanticAttribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Summary"/>
+        <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Temporality"/>
@@ -1654,7 +1658,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCertainty"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompletionStatus"/>
@@ -1662,23 +1666,23 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasComposition"/>
-        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+        <ObjectProperty IRI="#hasEpisodeModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContent"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContextualAspect"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContextualModality"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCourse"/>
@@ -1686,7 +1690,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDegree"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDeltaFlag"/>
@@ -1698,7 +1702,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDetail"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDevice"/>
@@ -1706,7 +1710,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDocType"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosage"/>
@@ -1721,20 +1725,20 @@
         <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasEpisodeAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasEpisodeModifier"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEpisodeType"/>
-        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+        <ObjectProperty IRI="#hasEpisodeModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEvent"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasExperiencer"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasForm"/>
@@ -1753,8 +1757,8 @@
         <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLowQuantity"/>
@@ -1786,19 +1790,19 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumericAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPermanence"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPolarity"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRate"/>
@@ -1814,15 +1818,15 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSection"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSectionType"/>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSemanticAttribute"/>
-        <ObjectProperty IRI="#hasAttribute"/>
+        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSensitivityType"/>
@@ -1846,7 +1850,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTemporality"/>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUnit"/>
@@ -1993,10 +1997,6 @@
         <Class IRI="#AllergyIntolerance"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAttribute"/>
-        <Class IRI="#Annotation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodyLocation"/>
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
@@ -2033,12 +2033,8 @@
         <Class IRI="#Episode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
         <Class IRI="#Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
-        <Class IRI="#CompositionAttribute"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasContent"/>
@@ -2133,7 +2129,7 @@
         <Class IRI="#Observation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2151,6 +2147,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMethod"/>
         <Class IRI="#Observation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasModifier"/>
+        <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasName"/>
@@ -2182,11 +2182,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#Phenotype"/>
+        <Class IRI="#PhenotypeAttribute"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#PhenotypeAttribute"/>
+        <Class IRI="#Summary"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -2293,10 +2293,6 @@
         <Class IRI="#Allergen"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAttribute"/>
-        <Class IRI="#Attribute"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyLocation"/>
         <Class IRI="#BodySite"/>
     </ObjectPropertyRange>
@@ -2321,7 +2317,7 @@
         <Class IRI="#Composition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
         <Class IRI="#CompositionAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2405,8 +2401,8 @@
         <Class IRI="#OrdinalInterpretation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasLinguisticAttribute"/>
-        <Class IRI="#LinguisticAttribute"/>
+        <ObjectProperty IRI="#hasLinguisticModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000053"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasLowQuantity"/>
@@ -2423,6 +2419,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
         <Class IRI="#Procedure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasName"/>
@@ -2746,6 +2746,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BodyQualifier</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">BodySiteModifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000088</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SummaryModel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
