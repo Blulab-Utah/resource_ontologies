@@ -16,37 +16,47 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://blulab.chpc.utah.edu/ontologies/Terminology.owl</Import>
     <Declaration>
-        <Class IRI="#DP0000000078"/>
+        <Class IRI="#Action"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000079"/>
+        <Class IRI="#Because_Group"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#But_Group"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000081"/>
+        <Class IRI="#Closure"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000082"/>
+        <Class IRI="#DP000053"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000083"/>
+        <Class IRI="#DP000054"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000084"/>
+        <Class IRI="#Modifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000085"/>
+        <Class IRI="#Patient_Group"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP0000000086"/>
+        <Class IRI="#Presentation_Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pseudo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SecondaryTo_Group"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Which_Group"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#DP0000000087"/>
@@ -78,37 +88,51 @@
     <Declaration>
         <ObjectProperty IRI="#DP0000000096"/>
     </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP000051"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#DP000052"/>
+    </Declaration>
     <SubClassOf>
-        <Class IRI="#DP0000000081"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#Because_Group"/>
+        <Class IRI="#Closure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DP0000000082"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#But_Group"/>
+        <Class IRI="#Closure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DP0000000083"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#DP000053"/>
+        <Class IRI="#Modifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DP0000000084"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#DP000054"/>
+        <Class IRI="#Modifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DP0000000085"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#Patient_Group"/>
+        <Class IRI="#Closure"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#DP0000000086"/>
-        <Class IRI="#DP0000000080"/>
+        <Class IRI="#Presentation_Group"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SecondaryTo_Group"/>
+        <Class IRI="#Closure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Which_Group"/>
+        <Class IRI="#Closure"/>
     </SubClassOf>
     <DisjointClasses>
-        <Class IRI="#DP0000000081"/>
-        <Class IRI="#DP0000000082"/>
-        <Class IRI="#DP0000000083"/>
-        <Class IRI="#DP0000000084"/>
-        <Class IRI="#DP0000000085"/>
-        <Class IRI="#DP0000000086"/>
+        <Class IRI="#Because_Group"/>
+        <Class IRI="#But_Group"/>
+        <Class IRI="#Patient_Group"/>
+        <Class IRI="#Presentation_Group"/>
+        <Class IRI="#SecondaryTo_Group"/>
+        <Class IRI="#Which_Group"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#DP0000000088"/>
@@ -147,57 +171,52 @@
         <ObjectProperty IRI="#DP0000000089"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#DP0000000096"/>
         <ObjectProperty IRI="#DP0000000090"/>
+        <ObjectProperty IRI="#DP0000000096"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#DP0000000091"/>
         <ObjectProperty IRI="#DP0000000092"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#DP000051"/>
+        <ObjectProperty IRI="#DP000052"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DP000051"/>
+        <Class IRI="#Modifier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#DP000052"/>
+        <Class IRI="#Pseudo"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DP000051"/>
+        <Class IRI="#Pseudo"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#DP000052"/>
+        <Class IRI="#Modifier"/>
+    </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000078</IRI>
+        <IRI>#Action</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Action</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000079</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Modifier</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000080</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Closure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000081</IRI>
+        <IRI>#Because_Group</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Because_Group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000082</IRI>
+        <IRI>#But_Group</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">But_Group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000083</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Patient_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000084</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Presentation_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000085</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SecondaryTo_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP0000000086</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which_Group</Literal>
+        <IRI>#Closure</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Closure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -248,6 +267,51 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DP0000000096</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isSvActionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000051</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasPseudo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000052</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">isPseudoOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000053</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">LinguisticModifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000054</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SemanticModifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Modifier</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Modifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Patient_Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Patient_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Presentation_Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Presentation_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SecondaryTo_Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SecondaryTo_Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Which_Group</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which_Group</Literal>
     </AnnotationAssertion>
 </Ontology>
 
