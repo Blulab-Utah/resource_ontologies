@@ -190,6 +190,21 @@
     <Declaration>
         <ObjectProperty IRI="#DP000052"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DP000089"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DP000090"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DP000091"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DP000092"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DP000093"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Because_Group"/>
         <Class IRI="#Closure"/>
@@ -368,6 +383,26 @@
         <Class IRI="#DP000061"/>
         <Class IRI="#DP000062"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Action"/>
+        <NamedIndividual IRI="#DP000089"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Action"/>
+        <NamedIndividual IRI="#DP000090"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Action"/>
+        <NamedIndividual IRI="#DP000091"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Action"/>
+        <NamedIndividual IRI="#DP000092"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Action"/>
+        <NamedIndividual IRI="#DP000093"/>
+    </ClassAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#DP0000000088"/>
         <ObjectProperty IRI="#DP0000000087"/>
@@ -681,6 +716,31 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DP000087</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">ProcedurePreparationStatus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000089</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">forward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000090</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">backward</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000091</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">bidirectional</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000092</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">discontinuous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000093</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">terminate</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
