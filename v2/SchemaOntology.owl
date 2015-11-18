@@ -397,9 +397,6 @@
         <ObjectProperty IRI="#hasDetail"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasDevice"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasDocType"/>
     </Declaration>
     <Declaration>
@@ -463,7 +460,7 @@
         <ObjectProperty IRI="#hasNumerator"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPermanence"/>
@@ -478,9 +475,6 @@
         <ObjectProperty IRI="#hasRate"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasReferenceRange"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
@@ -493,10 +487,7 @@
         <ObjectProperty IRI="#hasSectionType"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasSensitivityType"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSeverity"/>
@@ -726,13 +717,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasAllergen"/>
             <Class IRI="#Allergen_OLD"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#AllergyIntolerance"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSensitivityType"/>
-            <Class IRI="#SensitivityType_OLD"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1389,13 +1373,6 @@
     <SubClassOf>
         <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasDevice"/>
-            <Class IRI="#ProcedureInterventionDevice_OLD"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Procedure"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEncounter"/>
             <Class IRI="#Encounter"/>
         </ObjectSomeValuesFrom>
@@ -1618,43 +1595,43 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#has1dimension"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#has2dimension"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#has3dimension"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeAbatement"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeOnset"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeRange"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAllergen"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasBodyLocation"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasBodyQualifier"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasBodySide"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCertainty"/>
@@ -1662,7 +1639,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompletionStatus"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasComposition"/>
@@ -1686,7 +1663,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCourse"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDegree"/>
@@ -1694,19 +1671,15 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDeltaFlag"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDenominator"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDetail"/>
         <ObjectProperty IRI="#hasCompositionModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasDevice"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDocType"/>
@@ -1714,15 +1687,15 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosage"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosageQuantity"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEncounter"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEpisodeModifier"/>
@@ -1742,19 +1715,19 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasForm"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasGender"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasHighQuantity"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasInterpretation"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLinguisticModifier"/>
@@ -1762,34 +1735,34 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasLowQuantity"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMaritalStatus"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMedication"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMethod"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasName"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumValue"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumerator"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
         <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1806,15 +1779,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRate"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasReferenceRange"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRoute"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSection"/>
@@ -1825,28 +1794,24 @@
         <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
         <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSensitivityType"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSeverity"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasStage"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasStatusChange"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSubject"/>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasTemporality"/>
@@ -1854,7 +1819,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasUnit"/>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#indicates"/>
@@ -2002,10 +1967,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodyLocation"/>
-        <Class IRI="#Dosage_OLD"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodyLocation"/>
         <Class IRI="#Observation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2075,10 +2036,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDetail"/>
         <Class IRI="#CompositionEvent"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDevice"/>
-        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasDocType"/>
@@ -2162,7 +2119,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumValue"/>
-        <Class IRI="#Dosage_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000084"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumValue"/>
@@ -2173,11 +2130,11 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000077"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000074"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2201,16 +2158,12 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000084"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasReferenceRange"/>
-        <Class IRI="#Observation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRoute"/>
-        <Class IRI="#Dosage_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000084"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSection"/>
@@ -2225,16 +2178,12 @@
         <Class IRI="#DocumentSection"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000054"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
         <Class IRI="#Annotation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSensitivityType"/>
-        <Class IRI="#AllergyIntolerance"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSeverity"/>
@@ -2286,15 +2235,15 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAgeAbatement"/>
-        <Class IRI="#Age_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000083"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAgeOnset"/>
-        <Class IRI="#Age_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000083"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasAllergen"/>
-        <Class IRI="#Allergen_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000063"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyLocation"/>
@@ -2302,11 +2251,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodyQualifier"/>
-        <Class IRI="#BodyQualifier_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000067"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodySide"/>
-        <Class IRI="#BodySide_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000066"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCertainty"/>
@@ -2314,7 +2263,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompletionStatus"/>
-        <Class IRI="#ProcedureCompletionStatus_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000086"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposition"/>
@@ -2338,7 +2287,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCourse"/>
-        <Class IRI="#Course_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000080"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDegree"/>
@@ -2346,7 +2295,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDeltaFlag"/>
-        <Class IRI="#DeltaFlag_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000081"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDenominator"/>
@@ -2357,16 +2306,12 @@
         <Class IRI="#Element"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDevice"/>
-        <Class IRI="#ProcedureInterventionDevice_OLD"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDocType"/>
         <Class IRI="#DocumentOntology"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDosage"/>
-        <Class IRI="#Dosage_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000084"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDosageQuantity"/>
@@ -2390,11 +2335,11 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasForm"/>
-        <Class IRI="#MedicationForm_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000068"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasGender"/>
-        <Class IRI="#Gender_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000069"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasHighQuantity"/>
@@ -2402,7 +2347,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasInterpretation"/>
-        <Class IRI="#OrdinalInterpretation_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000085"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasLinguisticModifier"/>
@@ -2414,7 +2359,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMaritalStatus"/>
-        <Class IRI="#MaritalStatus_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000072"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMedication"/>
@@ -2430,18 +2375,18 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasName"/>
-        <Class IRI="#HumanName_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000073"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNumValue"/>
-        <Class IRI="#NumericAttribute"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000074"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasNumerator"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000075"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasNumericAttribute"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000074"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2465,32 +2410,24 @@
         <Class IRI="#Annotation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasRoute"/>
-        <Class IRI="#MedicationRoute_OLD"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSection"/>
         <Class IRI="#DocumentSection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSemanticAttribute"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000054"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSensitivityType"/>
-        <Class IRI="#SensitivityType_OLD"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSeverity"/>
-        <Class IRI="#Severity_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000065"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStage"/>
-        <Class IRI="#Stage_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000082"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasStatusChange"/>
-        <Class IRI="#StatusChange_OLD"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DP000081"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSubject"/>
