@@ -31836,11 +31836,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(geltend\sgemacht|machte\ses\geltend)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0001</IRI>
-        <Literal datatypeIRI="&xsd;string">(geltend\sgemacht|machte\ses\geltend)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0001</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">behauptet</Literal>
@@ -31884,11 +31879,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0002</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(definitiv|eindeutig)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0002</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(definitiv|eindeutig)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -31939,11 +31929,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0003</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(zweifellos|ohne\s(Bedenken|Zweifel)|bedenklos)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0003</IRI>
-        <Literal datatypeIRI="&xsd;string">(zweifellos|ohne\s(Bedenken|Zweifel)|bedenklos)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -32001,11 +31986,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(offensichtlich.{02}|offenkundig.{02}|evident.{02})\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0004</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(offensichtlich.{02}|offenkundig.{02}|evident.{02})\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0004</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">evident</Literal>
@@ -32054,11 +32034,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0005</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(daher\s|aus\sdiesem\sGrund)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0005</IRI>
-        <Literal datatypeIRI="&xsd;string">(daher\s|aus\sdiesem\sGrund)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -32206,11 +32181,6 @@
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">positiv(studie|examination|undersökning)(för)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0008</IRI>
-        <Literal datatypeIRI="&xsd;string">positiv(studie|examination|undersökning)(för)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0008</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">positives Analyseergebnis für</Literal>
@@ -32331,11 +32301,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(angemessen|hinreichend|ausreichend|adäquat|richtig)(\s)?(den\sPatienten|die\sPatient(en|in|nen))\s(davon|von\s.*?)\s\bauszuschließen\b ::: (angemessen|hinreichend|ausreichend|adäquat|richtig)(\s)?(den\sPatienten|die\sPatient(en|in|nen))\s(nicht\sin\sBetracht\szu\sziehen|nicht\szu\sberücksichtigen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0011</IRI>
-        <Literal datatypeIRI="&xsd;string">(angemessen|hinreichend|ausreichend|adäquat|richtig)(\s)?(den\sPatienten|die\sPatient(en|in|nen))\s(davon|von\s.*?)\s\bauszuschließen\b ::: (angemessen|hinreichend|ausreichend|adäquat|richtig)(\s)?(den\sPatienten|die\sPatient(en|in|nen))\s(nicht\sin\sBetracht\szu\sziehen|nicht\szu\sberücksichtigen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0011</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">tillräckligt för att utesluta</Literal>
@@ -32384,11 +32349,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0012</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sind|werden|wird)\s(davon|von\s.*?)\s(\bausgeschlossen\b|auszuschließen) ::: (werden|wird)(\sdafür|\sfür\s.*?)?\s(nicht\sin\sBetracht\sgezogen|nicht\sin\sFrage\skommen|nicht\sberücksichtigt)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0012</IRI>
-        <Literal datatypeIRI="&xsd;string">(sind|werden|wird)\s(davon|von\s.*?)\s(\bausgeschlossen\b|auszuschließen) ::: (werden|wird)(\sdafür|\sfür\s.*?)?\s(nicht\sin\sBetracht\sgezogen|nicht\sin\sFrage\skommen|nicht\sberücksichtigt)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -32536,11 +32496,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kann|können)\s(er|sie|es|der\sPatient|die\sPatien(ten|tinnen|tin))(\sdavon)?(\svons.*?)?\s\bausgeschlossen\swerden ::: (kann|können)\snicht\s(in\sFrage|in\sBetracht)\s(gezogen\swerden|kommen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0014</IRI>
-        <Literal datatypeIRI="&xsd;string">(kann|können)\s(er|sie|es|der\sPatient|die\sPatien(ten|tinnen|tin))(\sdavon)?(\svons.*?)?\s\bausgeschlossen\swerden ::: (kann|können)\snicht\s(in\sFrage|in\sBetracht)\s(gezogen\swerden|kommen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0014</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kann nicht in Betracht kommen</Literal>
@@ -32673,17 +32628,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0016</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;can\srule\s(her|him)\sout\sagainst&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0016</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">kan\sutesluta\s(henne|honom)\smot</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0016</IRI>
-        <Literal datatypeIRI="&xsd;string">kan\sutesluta\s(henne|honom)\smot</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -32826,11 +32771,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;can\srule\s(her|him)\sout\sagainst&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0019</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;can\srule\s(her|him)\sout\sagainst&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0019</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -32874,11 +32814,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0020</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kann|können)(\sman)?\snicht</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0020</IRI>
-        <Literal datatypeIRI="&xsd;string">(kann|können)(\sman)?\snicht</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -32979,11 +32914,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0022</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(\bbestreit(et|en)\b|\bbestrit(t|ten)\b|\blehn(|t|en|te|ten)\b\s.*?\bab\b|wies(en)?\s.*?\bzurück\b|\bvernein(en|t|te|ten)?\b|abgelehnt|zurückgewiesen|zurückweis(t|en))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0022</IRI>
-        <Literal datatypeIRI="&xsd;string">(\bbestreit(et|en)\b|\bbestrit(t|ten)\b|\blehn(|t|en|te|ten)\b\s.*?\bab\b|wies(en)?\s.*?\bzurück\b|\bvernein(en|t|te|ten)?\b|abgelehnt|zurückgewiesen|zurückweis(t|en))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -33246,11 +33176,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">schloss\s(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen))(\s(von\s.*?|davon\s))?\baus\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0027</IRI>
-        <Literal datatypeIRI="&xsd;string">schloss\s(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen))(\s(von\s.*?|davon\s))?\baus\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0027</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -33319,11 +33244,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0029</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wurd(e|en)\s(sie|er|es|der\sPatient|die\sPatient(en|in|innen))(\s(von\s.*?|davon\s))?\bausgeschlossen\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0029</IRI>
-        <Literal datatypeIRI="&xsd;string">wurd(e|en)\s(sie|er|es|der\sPatient|die\sPatient(en|in|innen))(\s(von\s.*?|davon\s))?\bausgeschlossen\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
