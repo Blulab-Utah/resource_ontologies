@@ -428,16 +428,16 @@
         <ObjectProperty IRI="#isActionOf"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isActionOf"/>
         <ObjectProperty IRI="#hasAction"/>
+        <ObjectProperty IRI="#isActionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#isDeActionOf"/>
         <ObjectProperty IRI="#hasActionDe"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#isEnActionOf"/>
         <ObjectProperty IRI="#hasActionEn"/>
+        <ObjectProperty IRI="#isEnActionOf"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasActionSv"/>
@@ -484,11 +484,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Because_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Because_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BodyModifier</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BodyModifier</Literal>
     </AnnotationAssertion>
@@ -496,11 +491,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#BodySide</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BodySide</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#But_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">But_Group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -599,11 +589,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Patient_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Patient_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Permanence</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Permanence</Literal>
     </AnnotationAssertion>
@@ -611,11 +596,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Polarity</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Polarity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Presentation_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Presentation_Group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -649,11 +629,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#SecondaryTo_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SecondaryTo_Group</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SemanticModifier</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SemanticModifier</Literal>
     </AnnotationAssertion>
@@ -676,11 +651,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Unit</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Unit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Which_Group</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Which_Group</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
