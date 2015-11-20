@@ -109,6 +109,9 @@
         <Class IRI="#Summary"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Target"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#adjacent_to"/>
     </Declaration>
     <Declaration>
