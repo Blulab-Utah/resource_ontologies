@@ -52,6 +52,9 @@
         <Class IRI="#DP000088"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DP000165"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DiseaseDisorder"/>
     </Declaration>
     <Declaration>
@@ -97,9 +100,6 @@
         <Class IRI="#Patient"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PhenotypeAttribute"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Procedure"/>
     </Declaration>
     <Declaration>
@@ -107,6 +107,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Summary"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SummaryAttribute"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Target"/>
@@ -611,7 +614,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompositionAttribute"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
+        <Class IRI="#DP000165"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompositionEvent"/>
@@ -735,7 +738,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EpisodeAttribute"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
+        <Class IRI="#DP000165"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EpisodeType"/>
@@ -829,10 +832,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#PhenotypeAttribute"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Procedure"/>
         <Class IRI="#Event"/>
     </SubClassOf>
@@ -871,6 +870,10 @@
     <SubClassOf>
         <Class IRI="#Summary"/>
         <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SummaryAttribute"/>
+        <Class IRI="#DP000165"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#adjacent_to"/>
@@ -1494,11 +1497,11 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#PhenotypeAttribute"/>
+        <Class IRI="#Summary"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#Summary"/>
+        <Class IRI="#SummaryAttribute"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -1610,7 +1613,7 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#PhenotypeAttribute"/>
+        <Class IRI="#SummaryAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
@@ -1830,6 +1833,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DP000088</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SummaryModel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#DP000165</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Attribute</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
