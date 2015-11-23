@@ -590,6 +590,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubject"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composition"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasDateOfComposition"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
@@ -1191,6 +1198,10 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasSubject"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1528,6 +1539,10 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStatusChange"/>
         <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSubject"/>
+        <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSubject"/>
