@@ -88,9 +88,6 @@
         <Class IRI="#Finding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Medication"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#MedicationStatement"/>
     </Declaration>
     <Declaration>
@@ -214,16 +211,10 @@
         <ObjectProperty IRI="#hasAgeRange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasAllergen"/>
+        <ObjectProperty IRI="#hasBodySite"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasBodyLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasBodyQualifier"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasBodySide"/>
+        <ObjectProperty IRI="#hasBodySiteModifier"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCertainty"/>
@@ -328,6 +319,9 @@
         <ObjectProperty IRI="#hasNumericModifier"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasPatient"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPermanence"/>
     </Declaration>
     <Declaration>
@@ -364,7 +358,7 @@
         <ObjectProperty IRI="#hasStatusChange"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#hasSubstance"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasTemporality"/>
@@ -466,6 +460,12 @@
         <DataProperty IRI="#hasAbatementBoolean"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasAllergyIntoleranceType"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasBirthDate"/>
     </Declaration>
     <Declaration>
@@ -478,7 +478,13 @@
         <DataProperty IRI="#hasConditionCategory"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasDateAbatement"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasDateOfComposition"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDateOfOnset"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDeathDate"/>
@@ -494,6 +500,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLastName"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasLastOccurence"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLocation"/>
@@ -517,6 +526,9 @@
         <DataProperty IRI="#hasQuantityValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasRecordedDate"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasSpan"/>
     </Declaration>
     <Declaration>
@@ -524,9 +536,6 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasToLocation"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#isBrand"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#isDeceased"/>
@@ -570,8 +579,93 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPatient"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSeverity"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Severity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSubstance"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Allergen"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">environment</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">food</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">medication</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">other</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAllergyIntoleranceType"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">Allergy</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">Intolerance</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDateOfOnset"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasLastOccurence"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyIntolerance"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasRecordedDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BodySite"/>
         <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySiteModifier"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySiteModifier"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPatient"/>
+            <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composition"/>
@@ -594,7 +688,7 @@
     <SubClassOf>
         <Class IRI="#Composition"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSubject"/>
+            <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -634,8 +728,29 @@
     <SubClassOf>
         <Class IRI="#Condition"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodyLocation"/>
+            <ObjectProperty IRI="#hasAgeOnset"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Age"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySite"/>
             <Class IRI="#BodySite"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCourse"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Course"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDeltaFlag"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DeltaFlag"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -648,8 +763,15 @@
     <SubClassOf>
         <Class IRI="#Condition"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSubject"/>
+            <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSeverity"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Severity"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -664,6 +786,27 @@
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasConditionCategory"/>
             <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDateAbatement"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDateOfOnset"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Condition"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasRecordedDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -753,31 +896,13 @@
         <Class IRI="#Condition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Medication"/>
-        <Class IRI="#Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Medication"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#isBrand"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#MedicationStatement"/>
         <Class IRI="#Event"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicationStatement"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMedication"/>
-            <Class IRI="#Medication"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MedicationStatement"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSubject"/>
+            <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -795,7 +920,7 @@
     <SubClassOf>
         <Class IRI="#Observation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodyLocation"/>
+            <ObjectProperty IRI="#hasBodySite"/>
             <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -852,7 +977,7 @@
     <SubClassOf>
         <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodyLocation"/>
+            <ObjectProperty IRI="#hasBodySite"/>
             <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -866,7 +991,7 @@
     <SubClassOf>
         <Class IRI="#Procedure"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasSubject"/>
+            <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1022,19 +1147,11 @@
         <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasAllergen"/>
+        <ObjectProperty IRI="#hasBodySite"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasBodyLocation"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasBodyQualifier"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasBodySide"/>
+        <ObjectProperty IRI="#hasBodySiteModifier"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1170,6 +1287,14 @@
         <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPatient"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPatient"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPermanence"/>
         <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
@@ -1214,11 +1339,7 @@
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSubject"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSubject"/>
+        <ObjectProperty IRI="#hasSubstance"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -1354,27 +1475,19 @@
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAllergen"/>
-        <Class IRI="#AllergyIntolerance"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodyLocation"/>
+        <ObjectProperty IRI="#hasBodySite"/>
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodyLocation"/>
+        <ObjectProperty IRI="#hasBodySite"/>
         <Class IRI="#Observation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodyLocation"/>
+        <ObjectProperty IRI="#hasBodySite"/>
         <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodyQualifier"/>
-        <Class IRI="#BodySite"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodySide"/>
+        <ObjectProperty IRI="#hasBodySiteModifier"/>
         <Class IRI="#BodySite"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1462,10 +1575,6 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasForm"/>
-        <Class IRI="#Medication"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasGender"/>
         <Class IRI="#Patient"/>
     </ObjectPropertyDomain>
@@ -1504,6 +1613,30 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasNumericModifier"/>
         <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#AllergyIntolerance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#BodySite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPermanence"/>
@@ -1558,28 +1691,24 @@
         <Class IRI="#MedicationStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#Condition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#MedicationStatement"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#Procedure"/>
+        <ObjectProperty IRI="#hasSubstance"/>
+        <Class IRI="#AllergyIntolerance"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasTemporality"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasBodyLocation"/>
+        <ObjectProperty IRI="#hasBodySite"/>
         <Class IRI="#BodySite"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodySiteModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBodySiteModifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposition"/>
@@ -1614,16 +1743,16 @@
         <Class IRI="#CompositionEvent"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMedication"/>
-        <Class IRI="#Medication"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
         <Class IRI="#Procedure"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasPatient"/>
+        <Class IRI="#Patient"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
@@ -1638,8 +1767,12 @@
         <Class IRI="#DocumentSection"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSubject"/>
-        <Class IRI="#Patient"/>
+        <ObjectProperty IRI="#hasSeverity"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Severity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSubstance"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Allergen"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="#hasFromLocation"/>
@@ -1656,6 +1789,12 @@
         <DataProperty IRI="#hasAbatementBoolean"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasAllergyIntoleranceType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasBirthDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -1668,9 +1807,6 @@
         <DataProperty IRI="#hasDeathDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
-        <DataProperty IRI="#isBrand"/>
-    </FunctionalDataProperty>
-    <FunctionalDataProperty>
         <DataProperty IRI="#isDeceased"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
@@ -1679,6 +1815,14 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasAbatementBoolean"/>
         <Class IRI="#Condition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
+        <Class IRI="#AllergyIntolerance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasAllergyIntoleranceType"/>
+        <Class IRI="#AllergyIntolerance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasBirthDate"/>
@@ -1697,8 +1841,16 @@
         <Class IRI="#Condition"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasDateAbatement"/>
+        <Class IRI="#Condition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasDateOfComposition"/>
         <Class IRI="#Composition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDateOfOnset"/>
+        <Class IRI="#AllergyIntolerance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDeathDate"/>
@@ -1709,8 +1861,16 @@
         <Class IRI="#Encounter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasLastOccurence"/>
+        <Class IRI="#AllergyIntolerance"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasProcedureCategory"/>
         <Class IRI="#Procedure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasRecordedDate"/>
+        <Class IRI="#AllergyIntolerance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasSpan"/>
@@ -1723,10 +1883,6 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasToLocation"/>
         <Class IRI="#Encounter"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#isBrand"/>
-        <Class IRI="#Medication"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#isDeceased"/>
@@ -1743,6 +1899,14 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasAbatementBoolean"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasAllergyIntoleranceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasBirthDate"/>
@@ -1766,7 +1930,15 @@
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasDateAbatement"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasDateOfComposition"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDateOfOnset"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
@@ -1788,6 +1960,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasLastName"/>
         <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasLastOccurence"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasMaxMinFlag"/>
@@ -1820,6 +1996,10 @@
         <Datatype abbreviatedIRI="xsd:float"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasRecordedDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasSpan"/>
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
@@ -1830,10 +2010,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasToLocation"/>
         <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#isBrand"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#isDeceased"/>
