@@ -34,6 +34,9 @@
         <Class IRI="#Annotation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Attribute"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#BodySite"/>
     </Declaration>
     <Declaration>
@@ -50,9 +53,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#DP000088"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DP000165"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DiseaseDisorder"/>
@@ -614,7 +614,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompositionAttribute"/>
-        <Class IRI="#DP000165"/>
+        <Class IRI="#Attribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CompositionEvent"/>
@@ -738,7 +738,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EpisodeAttribute"/>
-        <Class IRI="#DP000165"/>
+        <Class IRI="#Attribute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EpisodeType"/>
@@ -812,6 +812,20 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasGender"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Gender"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasName"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#HumanName"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Patient"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasBirthDate"/>
             <Datatype abbreviatedIRI="xsd:dateTime"/>
@@ -873,7 +887,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SummaryAttribute"/>
-        <Class IRI="#DP000165"/>
+        <Class IRI="#Attribute"/>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#adjacent_to"/>
@@ -1833,11 +1847,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#DP000088</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SummaryModel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP000165</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Attribute</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
