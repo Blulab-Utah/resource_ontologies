@@ -89,7 +89,7 @@
         <Class IRI="#MaritalStatus"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MedicationForm"/>
+        <Class IRI="#MedicationRoute"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Modifier"/>
@@ -286,7 +286,7 @@
         <Class IRI="#SemanticModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MedicationForm"/>
+        <Class IRI="#MedicationRoute"/>
         <Class IRI="#SemanticModifier"/>
     </SubClassOf>
     <SubClassOf>
@@ -566,11 +566,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#MaritalStatus</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MaritalStatus</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#MedicationForm</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">MedicationForm</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>

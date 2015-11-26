@@ -589,6 +589,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasNumValue"/>
+            <ObjectUnionOf>
+                <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+                <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#RangeModifier"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#asNeededBoolean"/>
             <Datatype abbreviatedIRI="xsd:boolean"/>
