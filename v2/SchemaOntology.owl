@@ -334,6 +334,9 @@
         <ObjectProperty IRI="#hasRate"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasReasonForUse"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
@@ -526,6 +529,9 @@
         <DataProperty IRI="#hasQuantityValue"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasReasonNotTaken"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasRecordedDate"/>
     </Declaration>
     <Declaration>
@@ -574,6 +580,20 @@
             </DataOneOf>
         </DataSomeValuesFrom>
     </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySite"/>
+            <Class IRI="#BodySite"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#asNeededBoolean"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#AllergyIntolerance"/>
         <Class IRI="#Entity"/>
@@ -902,9 +922,37 @@
     <SubClassOf>
         <Class IRI="#MedicationStatement"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasDosage"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasReasonForUse"/>
+            <Class IRI="#Condition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasReasonNotTaken"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicationStatement"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasRecordedDate"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicationStatement"/>
@@ -1311,6 +1359,10 @@
         <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReasonForUse"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRoute"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
@@ -1655,6 +1707,10 @@
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReasonForUse"/>
+        <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
@@ -1757,6 +1813,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPhenotypicAttribute"/>
         <Class IRI="#SummaryAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReasonForUse"/>
+        <Class IRI="#Condition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
@@ -1867,6 +1927,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasProcedureCategory"/>
         <Class IRI="#Procedure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasReasonNotTaken"/>
+        <Class IRI="#MedicationStatement"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasRecordedDate"/>
@@ -1994,6 +2058,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasQuantityValue"/>
         <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasReasonNotTaken"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasRecordedDate"/>

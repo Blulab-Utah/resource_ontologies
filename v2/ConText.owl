@@ -259,7 +259,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Dosage"/>
-        <Class IRI="#Quantity"/>
+        <Class IRI="#SemanticModifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#EthnicGroup"/>
