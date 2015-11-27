@@ -55,6 +55,9 @@
         <Class IRI="#DP000088"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#DiagnosticProcedure"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#DiseaseDisorder"/>
     </Declaration>
     <Declaration>
@@ -110,6 +113,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Target"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TherapeuticProcedure"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#adjacent_to"/>
@@ -337,6 +343,12 @@
         <ObjectProperty IRI="#hasReasonForUse"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasReasonPerformed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasRegimen"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
@@ -481,6 +493,9 @@
         <DataProperty IRI="#hasConditionCategory"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasCurrentNumberProcedure"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasDateAbatement"/>
     </Declaration>
     <Declaration>
@@ -544,7 +559,16 @@
         <DataProperty IRI="#hasToLocation"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasTotalNumberProcedure"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#isDeceased"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#notPerformedBoolean"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#reasonNotPerformed"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#wasNotGiven"/>
@@ -590,11 +614,25 @@
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMethod"/>
+            <Class IRI="#Procedure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasNumValue"/>
             <ObjectUnionOf>
                 <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
                 <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#RangeModifier"/>
             </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRoute"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -840,6 +878,10 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#DiagnosticProcedure"/>
+        <Class IRI="#Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#DiseaseDisorder"/>
         <Class IRI="#Condition"/>
     </SubClassOf>
@@ -985,8 +1027,40 @@
     <SubClassOf>
         <Class IRI="#Observation"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasEncounter"/>
+            <Class IRI="#Encounter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasInterpretation"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#OrdinalInterpretation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasMethod"/>
             <Class IRI="#Procedure"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasNumValue"/>
+            <ObjectUnionOf>
+                <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+                <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#RangeModifier"/>
+                <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Ratio"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Observation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPatient"/>
+            <Class IRI="#Patient"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1056,7 +1130,14 @@
     <SubClassOf>
         <Class IRI="#Procedure"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#hasProcedureCategory"/>
+            <DataProperty IRI="#notPerformedBoolean"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Procedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#reasonNotPerformed"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1071,6 +1152,31 @@
     <SubClassOf>
         <Class IRI="#SummaryAttribute"/>
         <Class IRI="#Attribute"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TherapeuticProcedure"/>
+        <Class IRI="#Procedure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TherapeuticProcedure"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasRegimen"/>
+            <Class IRI="#MedicationStatement"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TherapeuticProcedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasCurrentNumberProcedure"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TherapeuticProcedure"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasTotalNumberProcedure"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
     </SubClassOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#adjacent_to"/>
@@ -1373,6 +1479,14 @@
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasReasonPerformed"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasRegimen"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasRoute"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
@@ -1658,6 +1772,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMethod"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMethod"/>
         <Class IRI="#Observation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1721,8 +1839,20 @@
         <Class IRI="#MedicationStatement"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasReasonPerformed"/>
+        <Class IRI="#Procedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRegimen"/>
+        <Class IRI="#TherapeuticProcedure"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasRoute"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasSection"/>
@@ -1829,8 +1959,24 @@
         <Class IRI="#Condition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasReasonPerformed"/>
+        <Class IRI="#Condition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRegimen"/>
+        <Class IRI="#MedicationStatement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRegimen"/>
+        <Class IRI="#Procedure"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasRelation"/>
         <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasRoute"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSection"/>
@@ -1880,6 +2026,9 @@
         <DataProperty IRI="#isDeceased"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#notPerformedBoolean"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#wasNotGiven"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
@@ -1909,6 +2058,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasConditionCategory"/>
         <Class IRI="#Condition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCurrentNumberProcedure"/>
+        <Class IRI="#TherapeuticProcedure"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasDateAbatement"/>
@@ -1959,8 +2112,20 @@
         <Class IRI="#Encounter"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasTotalNumberProcedure"/>
+        <Class IRI="#TherapeuticProcedure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#isDeceased"/>
         <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#notPerformedBoolean"/>
+        <Class IRI="#Procedure"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#reasonNotPerformed"/>
+        <Class IRI="#Procedure"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#wasNotGiven"/>
@@ -2002,6 +2167,10 @@
             <Literal datatypeIRI="&rdf;PlainLiteral">finding</Literal>
             <Literal datatypeIRI="&rdf;PlainLiteral">symptom</Literal>
         </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasCurrentNumberProcedure"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasDateAbatement"/>
@@ -2090,8 +2259,20 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasTotalNumberProcedure"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#isDeceased"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#notPerformedBoolean"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#reasonNotPerformed"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#wasNotGiven"/>
