@@ -1282,6 +1282,13 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Experiencer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+            <Class IRI="#PseudoExperiencer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Patient_Group"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isTerminationTermOf"/>
@@ -1396,6 +1403,13 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Temporality"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#After_DocTimeRel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+            <Class IRI="#PseudoFuture"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Allergy_AllergyIntoleranceType"/>
         <Class IRI="#DP000094"/>
     </SubClassOf>
@@ -1454,6 +1468,13 @@
     <SubClassOf>
         <Class IRI="#Before_DocTimeRel"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Temporality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Before_DocTimeRel"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+            <Class IRI="#PseudoHistorical"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Bethesda_units_Unit"/>
@@ -1634,6 +1655,13 @@
     <SubClassOf>
         <Class IRI="#DefiniteNegatedExistence_Certainty"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Certainty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DefiniteNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+            <Class IRI="#PseudoNegation"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Delta_G_Unit"/>
@@ -2840,16 +2868,44 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Pseudo"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PseudoExperiencer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isPseudoOf"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Experiencer"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PseudoFuture"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Pseudo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PseudoFuture"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isPseudoOf"/>
+            <Class IRI="#After_DocTimeRel"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#PseudoHistorical"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Pseudo"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PseudoHistorical"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isPseudoOf"/>
+            <Class IRI="#Before_DocTimeRel"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#PseudoNegation"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Pseudo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PseudoNegation"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isPseudoOf"/>
+            <Class IRI="#DefiniteNegatedExistence_Certainty"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Puffs_unit_of_product_usage_Unit"/>
@@ -33361,11 +33417,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">hat(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen)(\s(davon\s|von\s.*?))?\bausgeschlossen\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0032</IRI>
-        <Literal datatypeIRI="&xsd;string">hat(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen)(\s(davon\s|von\s.*?))?\bausgeschlossen\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0032</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">uteslöt honom mot</Literal>
@@ -33646,11 +33697,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ausgeschlossen|schloss(en)?\s.*?\baus\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0039</IRI>
-        <Literal datatypeIRI="&xsd;string">(ausgeschlossen|schloss(en)?\s.*?\baus\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0039</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">exkluderade</Literal>
@@ -33801,11 +33847,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(wurde|ist)\s(ausgeschlossen(\sworden)?|nicht\sberücksichtigt(\sworden)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0042</IRI>
-        <Literal datatypeIRI="&xsd;string">(wurde|ist)\s(ausgeschlossen(\sworden)?|nicht\sberücksichtigt(\sworden)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0042</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wurde nicht berücksichtigt</Literal>
@@ -33886,11 +33927,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(fehlt|ist\snicht\svorhanden|besteht\snicht|existiert\snicht)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0044</IRI>
-        <Literal datatypeIRI="&xsd;string">(fehlt|ist\snicht\svorhanden|besteht\snicht|existiert\snicht)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0044</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">besteht nicht</Literal>
@@ -33958,17 +33994,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0045</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;(is|was) negative&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0045</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">(är|var)negativt</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0045</IRI>
-        <Literal datatypeIRI="&xsd;string">(är|var)negativt</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -34009,11 +34035,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0046</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wird(\s(davon|von\s.*?))?\s\bausgeschlossen\b(\swerden)?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0046</IRI>
-        <Literal datatypeIRI="&xsd;string">wird(\s(davon|von\s.*?))?\s\bausgeschlossen\b(\swerden)?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -34063,27 +34084,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0047</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;negative (examination|study|exam|evaluation) for&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0047</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Befund(e)?|Untersuchung(en)?|Ergebnis(e)?)(\s(ist|sind))?\s(für|in\sBezug\sauf|hinsichtlich|bezüglich|der|des|von|zu)\s.*?\bnegativ\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0047</IRI>
-        <Literal datatypeIRI="&xsd;string">(Befund(e)?|Untersuchung(en)?|Ergebnis(e)?)(\s(ist|sind))?\s(für|in\sBezug\sauf|hinsichtlich|bezüglich|der|des|von|zu)\s.*?\bnegativ\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0047</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">negativ(undersökning|studie|examination|utvärdering)\sför</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0047</IRI>
-        <Literal datatypeIRI="&xsd;string">negativ(undersökning|studie|examination|utvärdering)\sför</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34154,11 +34160,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0048</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">negativ\s(in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0048</IRI>
-        <Literal datatypeIRI="&xsd;string">negativ\s(in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -34271,11 +34272,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">entwickelte\ssich\s(niemals|nie|überhaupt\snicht)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0050</IRI>
-        <Literal datatypeIRI="&xsd;string">entwickelte\ssich\s(niemals|nie|überhaupt\snicht)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0050</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">entwickelte sich niemals</Literal>
@@ -34334,11 +34330,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0051</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(hatte|war)\s(sich)?(nie(mals)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0051</IRI>
-        <Literal datatypeIRI="&xsd;string">(hatte|war)\s(sich)?(nie(mals)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34408,27 +34399,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0052</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;\bno\b&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0052</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">(\bingen\b|\binga\b|\binget\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0052</IRI>
-        <Literal datatypeIRI="&xsd;string">(\bingen\b|\binga\b|\binget\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0052</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(kein.{02}|nicht|nein)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0052</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(kein.{02}|nicht|nein)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34514,11 +34490,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0053</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Daten|Information(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0053</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Daten|Information(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34626,11 +34597,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}\sneue.{02}</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0054</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}\sneue.{02}</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0054</IRI>
         <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">pas de nouvel</Literal>
@@ -34688,17 +34654,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0055</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;no[\s]*other&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0055</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}\s(andere.{01})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0055</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}\s(andere.{01})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34749,11 +34705,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0056</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}\s(Hinweis|Andeutung)\s(auf|für|in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0056</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}\s(Hinweis|Andeutung)\s(auf|für|in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -34838,17 +34789,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0058</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;\bnot\b&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0058</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">(\binte\b|\bej\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0058</IRI>
-        <Literal datatypeIRI="&xsd;string">(\binte\b|\bej\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -34954,11 +34895,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0060</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(hatt.{02}\s(nicht|kein.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0060</IRI>
-        <Literal datatypeIRI="&xsd;string">(hatt.{02}\s(nicht|kein.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -35126,11 +35062,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Patient.{02}\s(war|waren)\s(nicht|kein)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0064</IRI>
-        <Literal datatypeIRI="&xsd;string">(Patient.{02}\s(war|waren)\s(nicht|kein)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0064</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">patienten var inte</Literal>
@@ -35179,11 +35110,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0065</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ablehnen|lehn.{02}\s.*?\bab\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0065</IRI>
-        <Literal datatypeIRI="&xsd;string">(ablehnen|lehn.{02}\s.*?\bab\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -35236,11 +35162,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ablehnt.{02}|lehnt.{02}\s.*?\bab\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0066</IRI>
-        <Literal datatypeIRI="&xsd;string">(ablehnt.{02}|lehnt.{02}\s.*?\bab\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0066</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">avfärdad</Literal>
@@ -35289,11 +35210,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0067</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(erklärt.{02}|löst{02})\bsich\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0067</IRI>
-        <Literal datatypeIRI="&xsd;string">(erklärt.{02}|löst{02})\bsich\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -35399,11 +35315,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0069</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;&quot;&quot;&quot;&quot;ruled\s(him|her)\sout\sagainst&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0069</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;&quot;&quot;&quot;&quot;ruled\s(him|her)\sout\sagainst&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -35971,11 +35882,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0081</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0081</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">utesluter henne</Literal>
@@ -36031,11 +35937,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0082</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0082</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">utesluter henne mot</Literal>
@@ -36089,11 +35990,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0083</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0083</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;rules\s(him|her)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -36376,11 +36272,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(mit\skein.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0089</IRI>
-        <Literal datatypeIRI="&xsd;string">(mit\skein.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0089</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">med inga</Literal>
@@ -36471,11 +36362,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Tante|Tantes)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0091</IRI>
-        <Literal datatypeIRI="&xsd;string">(Tante|Tantes)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0091</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">moster</Literal>
@@ -36559,11 +36445,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0093</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Bruder|Bruders)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0093</IRI>
-        <Literal datatypeIRI="&xsd;string">(Bruder|Bruders)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -36651,11 +36532,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Vater|Vati|Papa|Papi)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0095</IRI>
-        <Literal datatypeIRI="&xsd;string">(Vater|Vati|Papa|Papi)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0095</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">fader</Literal>
@@ -36701,11 +36577,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Vaters|Vatis|Papas|Papis)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0096</IRI>
-        <Literal datatypeIRI="&xsd;string">(Vaters|Vatis|Papas|Papis)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0096</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">faders</Literal>
@@ -36749,11 +36620,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0097</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Familienanamnese|Familienkrankengeschichte|Familiengeschichte|Krankengeschichte\sders\Familie)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0097</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Familienanamnese|Familienkrankengeschichte|Familiengeschichte|Krankengeschichte\sders\Familie)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -36841,11 +36707,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Großvater|Opa|Großvaters|Opas\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0099</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Großvater|Opa|Großvaters|Opas\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0099</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">morfar</Literal>
@@ -36929,11 +36790,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0101</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Großmutter|Oma|Großmutters|Omas\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0101</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Großmutter|Oma|Großmutters|Omas\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37021,11 +36877,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Ehemann|Ehegatte|Gatte|Mann|Partner)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0103</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Ehemann|Ehegatte|Gatte|Mann|Partner)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0103</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">make</Literal>
@@ -37071,11 +36922,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Ehemanns|Ehegatten|Gatten|Manns|Partners)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0104</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Ehemanns|Ehegatten|Gatten|Manns|Partners)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0104</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">makens</Literal>
@@ -37119,11 +36965,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0105</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Mutter|Mama|Mutti|Mutters|Mamas|Muttis)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0105</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Mutter|Mama|Mutti|Mutters|Mamas|Muttis)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37581,11 +37422,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nach\s(Bedarf|Notwendigkeit)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0116</IRI>
-        <Literal datatypeIRI="&xsd;string">nach\s(Bedarf|Notwendigkeit)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0116</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">falls erforderlich</Literal>
@@ -37633,17 +37469,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0117</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;at\srisk\s(in\sthe\sfuture\s)?for&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0117</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ein|eine|die)\s(Risiko|Gefahr)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0117</IRI>
-        <Literal datatypeIRI="&xsd;string">(ein|eine|die)\s(Risiko|Gefahr)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37691,11 +37517,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ruf.{02}\s.*?\ban\b|angerufen|telefonier.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0118</IRI>
-        <Literal datatypeIRI="&xsd;string">(ruf.{02}\s.*?\ban\b|angerufen|telefonier.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0118</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -37734,11 +37555,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0119</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(komm.{02}\swieder)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0119</IRI>
-        <Literal datatypeIRI="&xsd;string">(komm.{02}\swieder)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37784,11 +37600,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0120</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(komm.{02}\swieder\s(zurück)?\sum</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0120</IRI>
-        <Literal datatypeIRI="&xsd;string">(komm.{02}\swieder\s(zurück)?\sum</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37883,17 +37694,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0122</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;if\sclinical\s(concern|suspicion)\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0122</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(wenn|falls)(\ses)?\sklinische\sBedenken)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0122</IRI>
-        <Literal datatypeIRI="&xsd;string">(wenn|falls)(\ses)?\sklinische\sBedenken)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -37991,11 +37792,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">acht.{02}\s((Sie\sauf|Ihr\sauf|auf)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0124</IRI>
-        <Literal datatypeIRI="&xsd;string">acht.{02}\s((Sie\sauf|Ihr\sauf|auf)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0124</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">uppmärksamma</Literal>
@@ -38039,11 +37835,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0125</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kehrt\s.*?\bzurück\b|kommt\s.*?\bzurück\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0125</IRI>
-        <Literal datatypeIRI="&xsd;string">(kehrt\s.*?\bzurück\b|kommt\s.*?\bzurück\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -38226,11 +38017,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sollt(e|en)\s(dort|da|es)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0130</IRI>
-        <Literal datatypeIRI="&xsd;string">sollt(e|en)\s(dort|da|es)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0130</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -38269,11 +38055,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0131</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nochmals\s(darauf)?(hingewiesen|angemerkt)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0131</IRI>
-        <Literal datatypeIRI="&xsd;string">nochmals\s(darauf)?(hingewiesen|angemerkt)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -38424,11 +38205,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0134</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bchronisch.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0134</IRI>
-        <Literal datatypeIRI="&xsd;string">\bchronisch.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -38616,11 +38392,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(dokumentiert.{02}|belegt.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0138</IRI>
-        <Literal datatypeIRI="&xsd;string">(dokumentiert.{02}|belegt.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0138</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">belegten</Literal>
@@ -38671,11 +38442,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bentwickelnd.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0139</IRI>
-        <Literal datatypeIRI="&xsd;string">\bentwickelnd.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0139</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">utvecklar</Literal>
@@ -38719,11 +38485,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0140</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Erfahr(ung|ungen)|Kenntni(s|sse))\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0140</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Erfahr(ung|ungen)|Kenntni(s|sse))\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -38828,17 +38589,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0142</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;\b(healing|healed)\b&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0142</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Heilung.{02}|Heilungsprozess.{02}|Gesundungsprozess.{02}\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0142</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Heilung.{02}|Heilungsprozess.{02}|Gesundungsprozess.{02}\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -38976,11 +38727,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bIntervall(wechsel|änderung|veränderung)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0145</IRI>
-        <Literal datatypeIRI="&xsd;string">\bIntervall(wechsel|änderung|veränderung)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0145</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Intervallveränderung</Literal>
@@ -39034,11 +38780,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0146</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">bekannt\sein.{02}.*?\bzu\b\shaben</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0146</IRI>
-        <Literal datatypeIRI="&xsd;string">bekannt\sein.{02}.*?\bzu\b\shaben</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -39226,11 +38967,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(zuvor\serwähnt.{02}|vorhergehend.{02}|vorausgehend.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0150</IRI>
-        <Literal datatypeIRI="&xsd;string">(zuvor\serwähnt.{02}|vorhergehend.{02}|vorausgehend.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0150</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">föregående</Literal>
@@ -39289,11 +39025,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0151</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(prior.{02}|früh.{02}|pior.{02}|vorhergehend.{02}|vorausgehend.{02})\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0151</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(prior.{02}|früh.{02}|pior.{02}|vorhergehend.{02}|vorausgehend.{02})\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -39361,11 +39092,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((vorausgehend.{02}|vorhergehend.{02}\sStudi(e|en))|Vorstudi(e|en))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0152</IRI>
-        <Literal datatypeIRI="&xsd;string">((vorausgehend.{02}|vorhergehend.{02}\sStudi(e|en))|Vorstudi(e|en))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0152</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">vorausgehende Untersuchungen</Literal>
@@ -39428,17 +39154,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0153</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;progression\s(of|in)&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0153</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Zunahme|Progression|Fortschreiten)\s(des|der|einer|eines|von|dieses|dieser)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0153</IRI>
-        <Literal datatypeIRI="&xsd;string">(Zunahme|Progression|Fortschreiten)\s(des|der|einer|eines|von|dieses|dieser)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -39491,11 +39207,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((erneut.{02}|neulich.{02}|wiederholt.{02})\s(Nachweis|Darstellung|Beweis)\s(der|des|von)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0154</IRI>
-        <Literal datatypeIRI="&xsd;string">((erneut.{02}|neulich.{02}|wiederholt.{02})\s(Nachweis|Darstellung|Beweis)\s(der|des|von)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0154</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">erneuter Nachweis</Literal>
@@ -39539,11 +39250,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0155</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Lösung\s(des|der|dieses|dieser|von)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0155</IRI>
-        <Literal datatypeIRI="&xsd;string">Lösung\s(des|der|dieses|dieser|von)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -39821,11 +39527,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">subakut.{02}</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0161</IRI>
-        <Literal datatypeIRI="&xsd;string">subakut.{02}</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0161</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -39911,11 +39612,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Prüfung|Beurteilung|Evaluierung)s\für</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0163</IRI>
-        <Literal datatypeIRI="&xsd;string">(Prüfung|Beurteilung|Evaluierung)s\für</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0163</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Beurteilung für</Literal>
@@ -39959,11 +39655,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0164</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kommt\snicht\s(in(Frage|Betracht))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0164</IRI>
-        <Literal datatypeIRI="&xsd;string">kommt\snicht\s(in(Frage|Betracht))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -40146,11 +39837,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(bewert.{03}|prüf.{03}|beurteil.{03})\s(um|damit)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0168</IRI>
-        <Literal datatypeIRI="&xsd;string">(bewert.{03}|prüf.{03}|beurteil.{03})\s(um|damit)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0168</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">beurteilen um</Literal>
@@ -40283,17 +39969,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0170</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;\b(examination|exam|study)\b&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0170</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(\bUntersuchung.{02}|Prüfung.{02}|Analyse.{02}\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0170</IRI>
-        <Literal datatypeIRI="&xsd;string">(\bUntersuchung.{02}|Prüfung.{02}|Analyse.{02}\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -40351,11 +40027,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(untersuch.{02}|analysier.{02}|prüf.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0171</IRI>
-        <Literal datatypeIRI="&xsd;string">(untersuch.{02}|analysier.{02}|prüf.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0171</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">analysieren</Literal>
@@ -40401,11 +40072,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Untersuchung.{02}|Analyse.{02}|Prüfung.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0172</IRI>
-        <Literal datatypeIRI="&xsd;string">(Untersuchung.{02}|Analyse.{02}|Prüfung.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0172</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Analyse</Literal>
@@ -40449,11 +40115,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0173</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;is more sensitive&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0173</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;is more sensitive&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -40571,11 +40232,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(dürfte|mag|kann)\svon\s.*?\s\bausgeschlossen\b\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0176</IRI>
-        <Literal datatypeIRI="&xsd;string">(dürfte|mag|kann)\svon\s.*?\s\bausgeschlossen\b\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0176</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -40614,11 +40270,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0177</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(dürfte|mag|kann)\s(davon|von\s.*?)\s\bausgeschlossen\b\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0177</IRI>
-        <Literal datatypeIRI="&xsd;string">(dürfte|mag|kann)\s(davon|von\s.*?)\s\bausgeschlossen\b\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -40664,11 +40315,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0178</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(könnte\s.*\sausgeschlossen\swerden)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0178</IRI>
-        <Literal datatypeIRI="&xsd;string">(könnte\s.*\sausgeschlossen\swerden)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -40776,11 +40422,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(muss|müssen)\s(davon|von\s.*?)\s\bausgeschlossen\b\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0181</IRI>
-        <Literal datatypeIRI="&xsd;string">(muss|müssen)\s(davon|von\s.*?)\s\bausgeschlossen\b\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0181</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -40859,11 +40500,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0183</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sollte|sollten)\sausgeschlossen\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0183</IRI>
-        <Literal datatypeIRI="&xsd;string">(sollte|sollten)\sausgeschlossen\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -41016,11 +40652,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Risikofaktoren\sfür\s(in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0187</IRI>
-        <Literal datatypeIRI="&xsd;string">Risikofaktoren\sfür\s(in\sBezug\sauf|hinsichtlich|bezüglich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0187</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -41136,11 +40767,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">schließt\s(sie|ihn|es|den\sPatienten|die\sPatientin)\s(davon|dagegen|gegen\s.*?|von\s.*?)\s\baus\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0190</IRI>
-        <Literal datatypeIRI="&xsd;string">schließt\s(sie|ihn|es|den\sPatienten|die\sPatientin)\s(davon|dagegen|gegen\s.*?|von\s.*?)\s\baus\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0190</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -41179,11 +40805,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0191</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;(r/o|rule out|\br o\b|r\.o\.|\bro\b)&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0191</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;(r/o|rule out|\br o\b|r\.o\.|\bro\b)&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -41263,17 +40884,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0193</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;rule (him|her|patient|the patient|subject) out for&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0193</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">utesluta\s(honom|henne|patientens|patienten)\sför</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0193</IRI>
-        <Literal datatypeIRI="&xsd;string">utesluta\s(honom|henne|patientens|patienten)\sför</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -41441,11 +41052,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sollt(e|en)\s(für|von)\s.*?\bausgeschlossen\b\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0197</IRI>
-        <Literal datatypeIRI="&xsd;string">sollt(e|en)\s(für|von)\s.*?\bausgeschlossen\b\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0197</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sollte dafür nicht erwogen werden</Literal>
@@ -41496,11 +41102,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Erkennungsstudie|Detektionsstudie|Erkennungsuntersuchung|Detektionsuntersuchung)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0198</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Erkennungsstudie|Detektionsstudie|Erkennungsuntersuchung|Detektionsuntersuchung)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0198</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Erkennungsuntersuchung</Literal>
@@ -41546,11 +41147,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">um\s.*?\bauszuschließen\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0199</IRI>
-        <Literal datatypeIRI="&xsd;string">um\s.*?\bauszuschließen\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0199</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -41589,11 +41185,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0200</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(was\sman\sausschließen\smuss|was\sman\sauszuschließen\shat|was\sauszuschließen\sist)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0200</IRI>
-        <Literal datatypeIRI="&xsd;string">(was\sman\sausschließen\smuss|was\sman\sauszuschließen\shat|was\sauszuschließen\sist)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -41676,11 +41267,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wird\svon\s.*?\bausgeschlossen\b\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0202</IRI>
-        <Literal datatypeIRI="&xsd;string">wird\svon\s.*?\bausgeschlossen\b\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0202</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -41721,11 +41307,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(wirkt|fungiert)\s(wie|als)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0203</IRI>
-        <Literal datatypeIRI="&xsd;string">(wirkt|fungiert)\s(wie|als)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0203</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">fungiert wie</Literal>
@@ -41764,11 +41345,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0204</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(und/oder|und\s/\soder)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0204</IRI>
-        <Literal datatypeIRI="&xsd;string">(und/oder|und\s/\soder)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -41814,11 +41390,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0205</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(offensichtlich|offenkundig|augenscheinlich|obgleich|erweck(t|en)\sden\sEindruck|mach(te|ten)\sden\sEindruck)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0205</IRI>
-        <Literal datatypeIRI="&xsd;string">(offensichtlich|offenkundig|augenscheinlich|obgleich|erweck(t|en)\sden\sEindruck|mach(te|ten)\sden\sEindruck)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -41948,17 +41519,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0207</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;&quot;&quot;&quot;&quot;\bappear\b&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0207</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(erschein(t|en)|scheinbar|hat\sden\sAnschein)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0207</IRI>
-        <Literal datatypeIRI="&xsd;string">(erschein(t|en)|scheinbar|hat\sden\sAnschein)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -42161,11 +41722,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nimmt\s.*?\s\ban\b|nehmens\s.*?\ban\b|unterstell(t|en))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0210</IRI>
-        <Literal datatypeIRI="&xsd;string">(nimmt\s.*?\s\ban\b|nehmens\s.*?\ban\b|unterstell(t|en))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0210</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">annehmen</Literal>
@@ -42271,11 +41827,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(glaub.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0212</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(glaub.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0212</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -42346,11 +41897,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(kann|kannst|können|könnt)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0214</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(kann|kannst|können|könnt)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0214</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -42389,11 +41935,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0215</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kann\ssein|kann\swerden|ist\smöglich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0215</IRI>
-        <Literal datatypeIRI="&xsd;string">(kann\ssein|kann\swerden|ist\smöglich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -42441,11 +41982,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">klinisches\s(Krankheitsbild|Bild)\swie\s(bei|in)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0216</IRI>
-        <Literal datatypeIRI="&xsd;string">klinisches\s(Krankheitsbild|Bild)\swie\s(bei|in)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0216</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -42484,11 +42020,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0217</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">klinisches\s(Krankheitsbild|Bild)s\(entsprechend|gemäß)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0217</IRI>
-        <Literal datatypeIRI="&xsd;string">klinisches\s(Krankheitsbild|Bild)s\(entsprechend|gemäß)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -42564,11 +42095,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0219</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(vergleich(end|bar)\smit|kompatibel\smit|im\sVergleich\s(zu|mit))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0219</IRI>
-        <Literal datatypeIRI="&xsd;string">(vergleich(end|bar)\smit|kompatibel\smit|im\sVergleich\s(zu|mit))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -42666,11 +42192,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(bedenk.{02}|((hat|haben)\sBedenken))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0221</IRI>
-        <Literal datatypeIRI="&xsd;string">(bedenk.{02}|((hat|haben)\sBedenken))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0221</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -42709,11 +42230,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0222</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(berücksichtig.{02}|zieh.{02}\sin\sBetracht)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0222</IRI>
-        <Literal datatypeIRI="&xsd;string">(berücksichtig.{02}|zieh.{02}\sin\sBetracht)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -42786,11 +42302,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Berücksichtigung.{02})|Überlegung.{02}))\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0223</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Berücksichtigung.{02})|Überlegung.{02}))\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0223</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Berücksichtigungen</Literal>
@@ -42841,11 +42352,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Überlegung.{02}\s(bezieh.{02}\ssich\sauf|umfassen|schließ.{02}\s.*?\s\bein\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0224</IRI>
-        <Literal datatypeIRI="&xsd;string">Überlegung.{02}\s(bezieh.{02}\ssich\sauf|umfassen|schließ.{02}\s.*?\s\bein\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0224</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -42889,11 +42395,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0225</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">stimmt\smit\s.*?\s\büberein\b|ist\smit\s.*?\bkompatibel\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0225</IRI>
-        <Literal datatypeIRI="&xsd;string">stimmt\smit\s.*?\s\büberein\b|ist\smit\s.*?\bkompatibel\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -43031,11 +42532,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">könnte\s.*?\s\bsein\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0228</IRI>
-        <Literal datatypeIRI="&xsd;string">könnte\s.*?\s\bsein\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0228</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">kan visa sig vara</Literal>
@@ -43088,17 +42584,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0229</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;differential\s((diagnosis|considerations)\s)?((would|could)\sinclud[a-z]*)?&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0229</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">die\sDifferenzialdiagnose\swürde(umfassen|einschließen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0229</IRI>
-        <Literal datatypeIRI="&xsd;string">die\sDifferenzialdiagnose\swürde(umfassen|einschließen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -43181,11 +42667,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">alles(deutet|läßt|weist)\s(darauf|darauf\shin|schließen|auf\s.*?\s\bhin\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0231</IRI>
-        <Literal datatypeIRI="&xsd;string">alles(deutet|läßt|weist)\s(darauf|darauf\shin|schließen|auf\s.*?\s\bhin\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0231</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">alles deutet darauf hin</Literal>
@@ -43239,11 +42720,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0232</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Eviden(z|en)|Prüf(ung|ungen)|Beurteil(ung|ungen))\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0232</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Eviden(z|en)|Prüf(ung|ungen)|Beurteil(ung|ungen))\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -43346,11 +42822,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(gefühlsmäßig)|dem\sGefühl\snach)|fühlt\ssich\san\swie|fühlt\ssich\swie\s.*?\s\ban\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0234</IRI>
-        <Literal datatypeIRI="&xsd;string">(gefühlsmäßig)|dem\sGefühl\snach)|fühlt\ssich\san\swie|fühlt\ssich\swie\s.*?\s\ban\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0234</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">dem Gefühl nach</Literal>
@@ -43394,11 +42865,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0235</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(fühlt.{02})\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0235</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(fühlt.{02})\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -43471,11 +42937,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(vermut.{02}|rat.{02}|nehmen\s.*?\s\ban\b|nimmt\s.*?\san)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0236</IRI>
-        <Literal datatypeIRI="&xsd;string">(vermut.{02}|rat.{02}|nehmen\s.*?\s\ban\b|nimmt\s.*?\san)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0236</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">annehmen</Literal>
@@ -43524,11 +42985,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0237</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ich\s(glaube|denke|vermute|nehme\s.*?\s\ban\b|bin\sder\sMeinung|bin\sder\sÜberzeugung)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0237</IRI>
-        <Literal datatypeIRI="&xsd;string">ich\s(glaube|denke|vermute|nehme\s.*?\s\ban\b|bin\sder\sMeinung|bin\sder\sÜberzeugung)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -43631,11 +43087,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(impliziert.{02)|miteinschließ.{02)|miteinschloss.{02)|schloss\s.*?\s\bmitein\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0239</IRI>
-        <Literal datatypeIRI="&xsd;string">(impliziert.{02)|miteinschließ.{02)|miteinschloss.{02)|schloss\s.*?\s\bmitein\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0239</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -43711,11 +43162,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">in\sÜbereinstimmung\smit|gemäß|in\sAnlehnung\san)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0241</IRI>
-        <Literal datatypeIRI="&xsd;string">in\sÜbereinstimmung\smit|gemäß|in\sAnlehnung\san)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0241</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">gemäß</Literal>
@@ -43764,11 +43210,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0242</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(zeig.{02}|deut.{02}\s.*?\s\ban\b)|((weist|wies|weisen)\s(darauf\shin|auf\s.*?\s\bhin\b))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0242</IRI>
-        <Literal datatypeIRI="&xsd;string">(zeig.{02}|deut.{02}\s.*?\s\ban\b)|((weist|wies|weisen)\s(darauf\shin|auf\s.*?\s\bhin\b))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -43941,11 +43382,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(verstand.{02|interpretiert.{02)\sals</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0245</IRI>
-        <Literal datatypeIRI="&xsd;string">(verstand.{02|interpretiert.{02)\sals</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0245</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">interpretiert als</Literal>
@@ -43998,17 +43434,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0246</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;is\sin\sthe\sdifferential&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0246</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ist\sin|liegt\sbei|befindet\ssich\sbei)\s(der|den)\s(differentiellen|einzelnen|unterschiedlichen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0246</IRI>
-        <Literal datatypeIRI="&xsd;string">(ist\sin|liegt\sbei|befindet\ssich\sbei)\s(der|den)\s(differentiellen|einzelnen|unterschiedlichen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44059,11 +43485,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0247</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wird\sals\s.*?\s\bverstanden\b|in\sdem\sSinne)\sverstanden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0247</IRI>
-        <Literal datatypeIRI="&xsd;string">wird\sals\s.*?\s\bverstanden\b|in\sdem\sSinne)\sverstanden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -44151,11 +43572,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sieht\sso\saus\swie|sieht\saus\swie|ähnelt\s(dem|der|den)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0249</IRI>
-        <Literal datatypeIRI="&xsd;string">sieht\sso\saus\swie|sieht\saus\swie|ähnelt\s(dem|der|den)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0249</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sieht aus wie</Literal>
@@ -44199,11 +43615,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0250</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(dürf.{02}|mag|mögen|kann|können)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0250</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(dürf.{02}|mag|mögen|kann|können)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44254,11 +43665,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0251</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(dürfte|mag|könnte)\ssein</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0251</IRI>
-        <Literal datatypeIRI="&xsd;string">(dürfte|mag|könnte)\ssein</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44318,27 +43724,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0252</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;(may|might)\srepresent&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0252</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(dürfte|mag)\s.*?\b(widerspiegeln|darstellen|repräsentiern)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0252</IRI>
-        <Literal datatypeIRI="&xsd;string">(dürfte|mag)\s.*?\b(widerspiegeln|darstellen|repräsentiern)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0252</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">(skulle kunna|kan)\srepresentera</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0252</IRI>
-        <Literal datatypeIRI="&xsd;string">(skulle kunna|kan)\srepresentera</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44431,11 +43822,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nicht\sausschließen|schließt\s.*?\bnicht\b\saus)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0254</IRI>
-        <Literal datatypeIRI="&xsd;string">nicht\sausschließen|schließt\s.*?\bnicht\b\saus)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0254</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -44483,17 +43869,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0255</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;not\s(excluded|ruled\sout)&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0255</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">nicht\sausgeschlossen|schloss\s.*?\bnicht\b\saus)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0255</IRI>
-        <Literal datatypeIRI="&xsd;string">nicht\sausgeschlossen|schloss\s.*?\bnicht\b\saus)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44626,11 +44002,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(bemerkt|bemerkt(e|en)|stellt(e|en)\s.*?\bfest\b|merkt(e|en)\s.*?\ban\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0258</IRI>
-        <Literal datatypeIRI="&xsd;string">(bemerkt|bemerkt(e|en)|stellt(e|en)\s.*?\bfest\b|merkt(e|en)\s.*?\ban\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0258</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">angemerkt</Literal>
@@ -44729,11 +44100,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0260</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">als\s.*?\b(verstanden|aufgefasst|wahrgenommen)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0260</IRI>
-        <Literal datatypeIRI="&xsd;string">als\s.*?\b(verstanden|aufgefasst|wahrgenommen)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -44839,11 +44205,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0262</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(weist|weisen|deuten|deutet)\sauf\s.*?\bhin\b?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0262</IRI>
-        <Literal datatypeIRI="&xsd;string">(weist|weisen|deuten|deutet)\sauf\s.*?\bhin\b?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -45051,11 +44412,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(vorläufg.{02}|temporär.{02}|zeitweilig.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0266</IRI>
-        <Literal datatypeIRI="&xsd;string">(vorläufg.{02}|temporär.{02}|zeitweilig.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0266</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">prel</Literal>
@@ -45156,11 +44512,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(unter\sder\sVoraussetzung|vorausgesetzt|voraussetzend|mutmaßlich|präsumptiv)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0268</IRI>
-        <Literal datatypeIRI="&xsd;string">(unter\sder\sVoraussetzung|vorausgesetzt|voraussetzend|mutmaßlich|präsumptiv)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0268</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">antog</Literal>
@@ -45239,11 +44590,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0269</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bpräsumptiv.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0269</IRI>
-        <Literal datatypeIRI="&xsd;string">\bpräsumptiv.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -45326,11 +44672,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(wahrscheinlich.{02}|vermutlich.{02})\s(Ursache|Grund)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0271</IRI>
-        <Literal datatypeIRI="&xsd;string">(wahrscheinlich.{02}|vermutlich.{02})\s(Ursache|Grund)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0271</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wahrscheinlicher Grund</Literal>
@@ -45369,11 +44710,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0272</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(wahrscheinlich.{02}|vermutlich.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0272</IRI>
-        <Literal datatypeIRI="&xsd;string">(wahrscheinlich.{02}|vermutlich.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -45501,11 +44837,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(fragwürdig.{02}|fraglich.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0274</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(fragwürdig.{02}|fraglich.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0274</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">fraglich</Literal>
@@ -45586,11 +44917,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((wirft|werfen)\sdie?s\Frag(e|en)\sauf|(stellt|stellen)\ssich\sdies\Frage)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0276</IRI>
-        <Literal datatypeIRI="&xsd;string">((wirft|werfen)\sdie?s\Frag(e|en)\sauf|(stellt|stellen)\ssich\sdies\Frage)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0276</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -45669,11 +44995,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0278</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((ergibt|ergeben)\ssich\sdie\sMöglich(keit|keiten))|(ist|sind)\sdie\sMöglich(keit|keiten)\sgegeben)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0278</IRI>
-        <Literal datatypeIRI="&xsd;string">((ergibt|ergeben)\ssich\sdie\sMöglich(keit|keiten))|(ist|sind)\sdie\sMöglich(keit|keiten)\sgegeben)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -45941,11 +45262,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(erscheint|scheint)\s(wie|als)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0284</IRI>
-        <Literal datatypeIRI="&xsd;string">(erscheint|scheint)\s(wie|als)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0284</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">erscheint wie</Literal>
@@ -45994,11 +45310,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0285</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;(seen|visualized|observed)&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0285</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;(seen|visualized|observed)&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -46181,11 +45492,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Anzeichen\svon|Hinweise\sauf)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0289</IRI>
-        <Literal datatypeIRI="&xsd;string">(Anzeichen\svon|Hinweise\sauf)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0289</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Hinweise auf</Literal>
@@ -46301,11 +45607,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((stark(er|en)|ernsthaft(er|en))\sVerdacht|stark\sverdächtig)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0292</IRI>
-        <Literal datatypeIRI="&xsd;string">((stark(er|en)|ernsthaft(er|en))\sVerdacht|stark\sverdächtig)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0292</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ernster Verdacht</Literal>
@@ -46358,17 +45659,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0293</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;\bsuggest\b&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0293</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(schlagen)s.*?\bvor\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0293</IRI>
-        <Literal datatypeIRI="&xsd;string">(schlagen)s.*?\bvor\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -46444,11 +45735,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0294</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(schlugen|schlug)s.*?\bvor\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0294</IRI>
-        <Literal datatypeIRI="&xsd;string">(schlugen|schlug)s.*?\bvor\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -46561,11 +45847,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(suggestiv.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0296</IRI>
-        <Literal datatypeIRI="&xsd;string">(suggestiv.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0296</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">indikerar</Literal>
@@ -46623,17 +45904,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0297</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;\bsuggests\b&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0297</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(schlägt)s.*?\bvor\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0297</IRI>
-        <Literal datatypeIRI="&xsd;string">(schlägt)s.*?\bvor\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -46726,11 +45997,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nimmt\s.*?\ban\b|annehmen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0299</IRI>
-        <Literal datatypeIRI="&xsd;string">(nimmt\s.*?\ban\b|annehmen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0299</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -46814,11 +46080,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0301</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(vermutet.{02}|verdächtigt.{02})|mutmaßlich.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0301</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(vermutet.{02}|verdächtigt.{02})|mutmaßlich.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -47226,11 +46487,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wurd.{02}\s(interpretiert|angesehen|verstanden)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0309</IRI>
-        <Literal datatypeIRI="&xsd;string">wurd.{02}\s(interpretiert|angesehen|verstanden)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0309</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">wurde angesehen</Literal>
@@ -47356,11 +46612,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(würde|würden)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0312</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(würde|würden)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0312</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">kunde</Literal>
@@ -47414,11 +46665,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0313</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(auf\sGrund|aufgrund|wegen|mit)\s(des|dem)\s(Fehlen(s)?|Ausbleiben(s)?)\s(des|der|von|dieses|dieser)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0313</IRI>
-        <Literal datatypeIRI="&xsd;string">(auf\sGrund|aufgrund|wegen|mit)\s(des|dem)\s(Fehlen(s)?|Ausbleiben(s)?)\s(des|der|von|dieses|dieser)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -47533,27 +46779,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0315</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;adequate\sto\srule\s(her|him)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0315</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(angemessen|hinreichend|adäquat)(\s|\s)?(sie|ihn|es|den\sPatienten|\sdie\sPatient(en|in|innen))\s(davon|dafür|deswegen|von\s.*?)\s\b(auszuschließen|nicht\zu\sberücksichtigen|nicht\sin\sBetracht\szu\sziehen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0315</IRI>
-        <Literal datatypeIRI="&xsd;string">(angemessen|hinreichend|adäquat)(\s|\s)?(sie|ihn|es|den\sPatienten|\sdie\sPatient(en|in|innen))\s(davon|dafür|deswegen|von\s.*?)\s\b(auszuschließen|nicht\zu\sberücksichtigen|nicht\sin\sBetracht\szu\sziehen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0315</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">adekvat\satt\sutesluta\s(henne|honom)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0315</IRI>
-        <Literal datatypeIRI="&xsd;string">adekvat\satt\sutesluta\s(henne|honom)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -47828,27 +47059,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0323</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;can\srule\s(her|him)\sout\sagainst&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0323</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sie|er|es|der\sPatient|die\sPatient(en|in|innen))\s(kann|können)(\s(davon|dafür|deswegen|durch|auf\sGrund\von|von))?(\s.*?)?\s(ausgeschlossen|nicht\sberücksichtigt|nicht\sin\sBetracht\sgezogen)\swerden</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0323</IRI>
-        <Literal datatypeIRI="&xsd;string">(sie|er|es|der\sPatient|die\sPatient(en|in|innen))\s(kann|können)(\s(davon|dafür|deswegen|durch|auf\sGrund\von|von))?(\s.*?)?\s(ausgeschlossen|nicht\sberücksichtigt|nicht\sin\sBetracht\sgezogen)\swerden</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0323</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">kan\sutesluta\s(henne|honom)\smot</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0323</IRI>
-        <Literal datatypeIRI="&xsd;string">kan\sutesluta\s(henne|honom)\smot</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48058,17 +47274,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0329</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;(cannot|can\snot)\sbe\sexcluded&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0329</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kann|können)(\sman)?\snicht(\svollkommen)?\s(ausgeschlossen|ausschließen)(\swerden)?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0329</IRI>
-        <Literal datatypeIRI="&xsd;string">(kann|können)(\sman)?\snicht(\svollkommen)?\s(ausgeschlossen|ausschließen)(\swerden)?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48136,11 +47342,6 @@
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">&quot;r&quot;&quot;cannot\sexclude&quot;&quot;&quot;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0330</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;cannot\sexclude&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0330</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -48184,11 +47385,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0331</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kann|können)(\sman)?\snicht\s(gefunden|gesehen|finden|sehen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0331</IRI>
-        <Literal datatypeIRI="&xsd;string">(kann|können)(\sman)?\snicht\s(gefunden|gesehen|finden|sehen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48254,11 +47450,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0332</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(könnt.{02}|können|kann)(\sman)(\snicht)?\s(ausgeschlossen|ausschließen|in\sBetracht\sgezogen|unberücksichtigt(\sbleiben)?|berücksichtigt(\sbleiben)?)(\swerden)?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0332</IRI>
-        <Literal datatypeIRI="&xsd;string">(könnt.{02}|können|kann)(\sman)(\snicht)?\s(ausgeschlossen|ausschließen|in\sBetracht\sgezogen|unberücksichtigt(\sbleiben)?|berücksichtigt(\sbleiben)?)(\swerden)?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48361,11 +47552,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(vernein(t|en|end|test)|bestreit(et|en|end|est)|weist\s.*?\bzurück|zurückweisend|lehn(t|en|st)\s.*?\bab\b|ablehnend)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0334</IRI>
-        <Literal datatypeIRI="&xsd;string">(vernein(t|en|end|test)|bestreit(et|en|end|est)|weist\s.*?\bzurück|zurückweisend|lehn(t|en|st)\s.*?\bab\b|ablehnend)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0334</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">bestreiten</Literal>
@@ -48421,11 +47607,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(denk.{02}|glaub.{02}|nehm.{02})\b\s(sie|Sie)?\snicht(\s.*?\ban\b)?\sdass\s(d(ie|as|er|iese|ieses))\s(Befund|Ergebni(s|se)|Resulta(t|te)|Daten)\bdafür\b\ssprechen\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0335</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(denk.{02}|glaub.{02}|nehm.{02})\b\s(sie|Sie)?\snicht(\s.*?\ban\b)?\sdass\s(d(ie|as|er|iese|ieses))\s(Befund|Ergebni(s|se)|Resulta(t|te)|Daten)\bdafür\b\ssprechen\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0335</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -48459,11 +47640,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0336</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(Zweifel|Bedenken|Unsicherheit)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0336</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(Zweifel|Bedenken|Unsicherheit)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48519,11 +47695,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0337</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(zweifelhaft|fraglich|bedenklich|unsicher)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0337</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(zweifelhaft|fraglich|bedenklich|unsicher)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48586,11 +47757,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bschließ.{02}\b(\s.*?)?(\s(man|es))?\s\baus\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0338</IRI>
-        <Literal datatypeIRI="&xsd;string">\bschließ.{02}\b(\s.*?)?(\s(man|es))?\s\baus\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0338</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">exkludera</Literal>
@@ -48639,11 +47805,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0339</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(zeigt\ssichs\nicht|kommt\snicht\szum\sVorschein)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0339</IRI>
-        <Literal datatypeIRI="&xsd;string">(zeigt\ssichs\nicht|kommt\snicht\szum\sVorschein)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48708,17 +47869,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0340</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;(is|was|are|were)\snot\sexcluded&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0340</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">(är|var)\sinte\suteslutet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0340</IRI>
-        <Literal datatypeIRI="&xsd;string">(är|var)\sinte\suteslutet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48771,11 +47922,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">((weist|weisen)\snicht(\sdarauf)?(\sauf\s.*?)?\s\bhin\b|(wird|werden)\snicht\sindiziert|deutet\ssich\snicht(\s.*?)?\san)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0341</IRI>
-        <Literal datatypeIRI="&xsd;string">((weist|weisen)\snicht(\sdarauf)?(\sauf\s.*?)?\s\bhin\b|(wird|werden)\snicht\sindiziert|deutet\ssich\snicht(\s.*?)?\san)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0341</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">weist nicht darauf hin</Literal>
@@ -48821,11 +47967,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(gering.{02}|niedrig.{02})\b\s(Wahrscheinlichkeit(en)?|Chance(n)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0342</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(gering.{02}|niedrig.{02})\b\s(Wahrscheinlichkeit(en)?|Chance(n)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0342</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">geringe Chance</Literal>
@@ -48869,11 +48010,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0343</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(abnormale(n)?|unnormale(n)?|atypische(n)?|untypische(n)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0343</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(abnormale(n)?|unnormale(n)?|atypische(n)?|untypische(n)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -48934,11 +48070,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0344</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Grund|Gründe|Ursache(n)?)\sfür</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0344</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Grund|Gründe|Ursache(n)?)\sfür</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49006,11 +48137,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Beschwerde(n)?|Klage(n)?|Einwände(n)?)\s(zu|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0345</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Beschwerde(n)?|Klage(n)?|Einwände(n)?)\s(zu|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0345</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">inget besvär av</Literal>
@@ -49073,17 +48199,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0346</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;no[\s]*definite&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0346</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(definitiv(e|en)|eindeutig(e|en))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0346</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(definitiv(e|en)|eindeutig(e|en))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49186,11 +48302,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Hinweis(e)?|Resultat(e)?|Beleg(e)?|Anzeichen|Nachweis(e)?|Nachweis(e)?)\s(auf|für|zu|über|gegen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0348</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Hinweis(e)?|Resultat(e)?|Beleg(e)?|Anzeichen|Nachweis(e)?|Nachweis(e)?)\s(auf|für|zu|über|gegen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0348</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">inga slutsatser</Literal>
@@ -49251,11 +48362,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Hinweis(e)?|Resultat(e)?|Beleg(e)?|Anzeichen|Nachweis(e)?|Nachweis(e)?)()?(\s)?(d(ie|as|er)|welche(s|r)?)\s(andeute(t|n)|verdeutlich(t|en)|darauf\shinweisen|auf\s.*?\s\bhinweisen\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0349</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Hinweis(e)?|Resultat(e)?|Beleg(e)?|Anzeichen|Nachweis(e)?|Nachweis(e)?)()?(\s)?(d(ie|as|er)|welche(s|r)?)\s(andeute(t|n)|verdeutlich(t|en)|darauf\shinweisen|auf\s.*?\s\bhinweisen\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0349</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein Ergebnisse die verdeutlichen</Literal>
@@ -49311,11 +48417,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Beleg|Belege|Gründe|Grund)\sfür</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0350</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Beleg|Belege|Gründe|Grund)\sfür</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0350</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein Grund für</Literal>
@@ -49369,11 +48470,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0351</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Hinweis|Hinweise|Indiz|Indizien|Verdacht|Anhaltspunkt|Anzeichen|Zeichen|Informationen)\s(zu|von|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0351</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Hinweis|Hinweise|Indiz|Indizien|Verdacht|Anhaltspunkt|Anzeichen|Zeichen|Informationen)\s(zu|von|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49441,11 +48537,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\soffensichtlich.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0352</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\soffensichtlich.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0352</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">keine offensichtliche</Literal>
@@ -49499,11 +48590,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0353</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein Anzeichen von</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0353</IRI>
-        <Literal datatypeIRI="&xsd;string">kein Anzeichen von</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49574,11 +48660,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0354</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(signifikant{02}|deutlich{02}|wesentlich{02}|maßgeblich{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0354</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(signifikant{02}|deutlich{02}|wesentlich{02}|maßgeblich{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49696,11 +48777,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Hinweis|Hinweise|Indiz|Indizien|Verdacht|Anhaltspunkt|Anzeichen|Zeichen|Informationen)\s(zu|von|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0356</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Hinweis|Hinweise|Indiz|Indizien|Verdacht|Anhaltspunkt|Anzeichen|Zeichen|Informationen)\s(zu|von|über|hinsichtlich|gegen|in\sBezug\sauf|bezüglich|in\sHinsicht\sauf)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0356</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">inga tecken på</Literal>
@@ -49751,11 +48827,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(unsicher|ungewiss|nicht\ssicher)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0357</IRI>
-        <Literal datatypeIRI="&xsd;string">(unsicher|ungewiss|nicht\ssicher)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0357</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -49789,11 +48860,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0358</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht\sein.{02}\s\bsicher.{02}\b|ein.{0.2}\sunsicher.{02}|ein.{0.2}\sunsicher.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0358</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht\sein.{02}\s\bsicher.{02}\b|ein.{0.2}\sunsicher.{02}|ein.{0.2}\sunsicher.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49839,11 +48905,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0359</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(schätz.{02}|würdig.{02}|achte.{02}|begrüß.{02})\snicht</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0359</IRI>
-        <Literal datatypeIRI="&xsd;string">(schätz.{02}|würdig.{02}|achte.{02}|begrüß.{02})\snicht</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49914,11 +48975,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0360</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(\bkein.{02}\b\sAssoziation\smit|nicht\smit\s.*?\b(assoziiert|verbunden)\b|steht\snicht\sim\sZusammenhang\mit|kein.{02}\s(Zusammenhang|Zusammenhänge|Verbindung)\smit)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0360</IRI>
-        <Literal datatypeIRI="&xsd;string">(\bkein.{02}\b\sAssoziation\smit|nicht\smit\s.*?\b(assoziiert|verbunden)\b|steht\snicht\sim\sZusammenhang\mit|kein.{02}\s(Zusammenhang|Zusammenhänge|Verbindung)\smit)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -49996,11 +49052,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Beschwerden|Klagen|Einwand|Einwände)\s(zu|über|in\sBezug\shinsichtlich\sbezüglich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0361</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Beschwerden|Klagen|Einwand|Einwände)\s(zu|über|in\sBezug\shinsichtlich\sbezüglich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0361</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">inte klagar på</Literal>
@@ -50059,11 +49110,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0362</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht\s(angezeigt|nachweisbar|demonstriert)|zeigt\skein.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0362</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht\s(angezeigt|nachweisbar|demonstriert)|zeigt\skein.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -50176,11 +49222,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(kein.{02}\s(Kentnis(se)?|Wissen)\s(über|von|zu|zum)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0364</IRI>
-        <Literal datatypeIRI="&xsd;string">(kein.{02}\s(Kentnis(se)?|Wissen)\s(über|von|zu|zum)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0364</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein Wissen über</Literal>
@@ -50241,11 +49282,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht\sbekannt|wissen nicht|keine\s(Kenntnis(se)?|Wissen)\sdarüber)()?(\s)?(\b(ein.{02}\s.*?|d.{02}\s.*?)\b)?(\s.*?)?zu\shaben ::: (nicht|keine\s(Kenntnis(se)?|Wissen)\sdarüber)()?(\s)?(sie|er|es|der\sPatient|die\sPatienten(in|innen)?)\s.*?\b(hat|haben)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0365</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht\sbekannt|wissen nicht|keine\s(Kenntnis(se)?|Wissen)\sdarüber)()?(\s)?(\b(ein.{02}\s.*?|d.{02}\s.*?)\b)?(\s.*?)?zu\shaben ::: (nicht|keine\s(Kenntnis(se)?|Wissen)\sdarüber)()?(\s)?(sie|er|es|der\sPatient|die\sPatienten(in|innen)?)\s.*?\b(hat|haben)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0365</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">inte känd att ha</Literal>
@@ -50299,11 +49335,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0366</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(zeig.{02})\skeine|komm.{0.2}\snicht\szum\sVorschein)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0366</IRI>
-        <Literal datatypeIRI="&xsd;string">(zeig.{02})\skeine|komm.{0.2}\snicht\szum\sVorschein)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -50421,11 +49452,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(sieht|sehen|erkenn.{02}|find.{02})\s(nicht|kein.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0368</IRI>
-        <Literal datatypeIRI="&xsd;string">(sieht|sehen|erkenn.{02}|find.{02})\s(nicht|kein.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0368</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">erkennen nicht</Literal>
@@ -50479,11 +49505,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0369</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(denk.{02}|glaub.{02}|nehm.{02}|nimmt)\snicht(\san)?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0369</IRI>
-        <Literal datatypeIRI="&xsd;string">(denk.{02}|glaub.{02}|nehm.{02}|nimmt)\snicht(\san)?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -50566,11 +49587,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">eher\s.*?\bals\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0371</IRI>
-        <Literal datatypeIRI="&xsd;string">eher\s.*?\bals\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0371</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -50614,11 +49630,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0372</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ausreichend|hinreichend|genügend)(\s.*?)?(\s)?um\s(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen)?)\s((von|für|gegen|in\sBezug\sauf|bezüglich|hinsichtlich)\s.*?)?(auszuschließen|nicht\sin\sBetracht\szu\sziehen|nicht\szu\sberücksichtigen|unberücksichtigt\szu\slassen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0372</IRI>
-        <Literal datatypeIRI="&xsd;string">(ausreichend|hinreichend|genügend)(\s.*?)?(\s)?um\s(sie|ihn|es|den\sPatienten|die\sPatient(en|in|innen)?)\s((von|für|gegen|in\sBezug\sauf|bezüglich|hinsichtlich)\s.*?)?(auszuschließen|nicht\sin\sBetracht\szu\sziehen|nicht\szu\sberücksichtigen|unberücksichtigt\szu\slassen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -50698,17 +49709,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0374</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;sufficient\sto\srule\s(her|him)\sout\sfor&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0374</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">tillräckligt\sför\satt\sutesluta\s(henne|honom)\sför</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0374</IRI>
-        <Literal datatypeIRI="&xsd;string">tillräckligt\sför\satt\sutesluta\s(henne|honom)\sför</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -50783,17 +49784,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0376</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;&quot;&quot;&quot;&quot;sufficient\sto\srule\s(him|her)\sout\sagainst&quot;&quot;&quot;&quot;&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0376</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">tillräckligt\sför\satt\sutesluta\s(henne|honom)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0376</IRI>
-        <Literal datatypeIRI="&xsd;string">tillräckligt\sför\satt\sutesluta\s(henne|honom)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -51061,11 +50052,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Test(s)?|Untersuchung(en)?)\s(gegen|für|auf|zum|zu|zur)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0384</IRI>
-        <Literal datatypeIRI="&xsd;string">(Test(s)?|Untersuchung(en)?)\s(gegen|für|auf|zum|zu|zur)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0384</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Untersuchung auf</Literal>
@@ -51116,11 +50102,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(um\s.*?\s(nicht\sin\sBetracht\szu\sziehen|um\sauszuschließen|nicht\szu\sberücksichtigen|unberücksichtigt\szu\slassen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0385</IRI>
-        <Literal datatypeIRI="&xsd;string">(um\s.*?\s(nicht\sin\sBetracht\szu\sziehen|um\sauszuschließen|nicht\szu\sberücksichtigen|unberücksichtigt\szu\slassen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0385</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -51164,11 +50145,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0386</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht(\sdazu)?\sin\sder\sLage|nicht(\sdazu)?\s fähig)(\s\s.*?)(\szu)?\s(beurteilen|prüfen|analysieren|untersuchen|angemessen|adäquat|sachlich|hinreichend|zufriedenstellend)(\szu)?</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0386</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht(\sdazu)?\sin\sder\sLage|nicht(\sdazu)?\s fähig)(\s\s.*?)(\szu)?\s(beurteilen|prüfen|analysieren|untersuchen|angemessen|adäquat|sachlich|hinreichend|zufriedenstellend)(\szu)?</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -51351,11 +50327,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">sehr\swenig\swas\sfür\s.*?\bspricht\b)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0390</IRI>
-        <Literal datatypeIRI="&xsd;string">sehr\swenig\swas\sfür\s.*?\bspricht\b)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0390</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -51394,11 +50365,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0391</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ohne(\s(ein.{02}|d.{02}))?\s(Verdacht|Angabe(n)?|Anzeichen|Information(en)?|Hinweis(e)?|Indikation(en))\s(von|d.{02}|ein.{02}|auf|zu|über)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0391</IRI>
-        <Literal datatypeIRI="&xsd;string">ohne(\s(ein.{02}|d.{02}))?\s(Verdacht|Angabe(n)?|Anzeichen|Information(en)?|Hinweis(e)?|Indikation(en))\s(von|d.{02}|ein.{02}|auf|zu|über)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -51534,11 +50500,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0393</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">von\s(ihrem|ihrer|seinem|seiner)\s(Mann|Ehemann|Gatte|Ehegatte|Frau|Ehefrau|Gattin|Ehegattin)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0393</IRI>
-        <Literal datatypeIRI="&xsd;string">von\s(ihrem|ihrer|seinem|seiner)\s(Mann|Ehemann|Gatte|Ehegatte|Frau|Ehefrau|Gattin|Ehegattin)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -51766,11 +50727,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">täglich(e|es)\s(Anamnese|Krankheits(bild|geschichte)\s(des|der|von|dieser|dieses))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0398</IRI>
-        <Literal datatypeIRI="&xsd;string">täglich(e|es)\s(Anamnese|Krankheits(bild|geschichte)\s(des|der|von|dieser|dieses))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0398</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">tägliche Anamnese von</Literal>
@@ -51814,11 +50770,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0399</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(ausführlich.{02}|detailliert.{02})\s(Krankheitsgeschicht.{02})|Anamnes.{02}))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0399</IRI>
-        <Literal datatypeIRI="&xsd;string">(ausführlich.{02}|detailliert.{02})\s(Krankheitsgeschicht.{02})|Anamnes.{02}))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52021,11 +50972,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Geschichte|Krankengeschichte|Anamnese)\s(der|des|dieser|dieses|von)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0403</IRI>
-        <Literal datatypeIRI="&xsd;string">(Geschichte|Krankengeschichte|Anamnese)\s(der|des|dieser|dieses|von)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0403</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">Anamnese von</Literal>
@@ -52076,11 +51022,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Geschichte|Krankengeschichte|Anamnese\s(der\smeisten\sBeschwerden|der\sHauptbeschwerden))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0404</IRI>
-        <Literal datatypeIRI="&xsd;string">(Geschichte|Krankengeschichte|Anamnese\s(der\smeisten\sBeschwerden|der\sHauptbeschwerden))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0404</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">anamnes med huvudsakliga klagomål</Literal>
@@ -52124,11 +51065,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0405</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Geschichte|Krankengeschichte|Anamnese)\sder\s(aktuellen|gegenwärtigen|jetzigen|untersuchten)\sKrankheit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0405</IRI>
-        <Literal datatypeIRI="&xsd;string">(Geschichte|Krankengeschichte|Anamnese)\sder\s(aktuellen|gegenwärtigen|jetzigen|untersuchten)\sKrankheit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52181,11 +51117,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">aufgenommene\s(Krankengeschichte|Anamnese|Geschichte)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0406</IRI>
-        <Literal datatypeIRI="&xsd;string">aufgenommene\s(Krankengeschichte|Anamnese|Geschichte)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0406</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">aufgenomme Anamnese</Literal>
@@ -52234,11 +51165,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0407</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Krankengeschichte|Anamnese|Geschichte)(\s)?und</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0407</IRI>
-        <Literal datatypeIRI="&xsd;string">(Krankengeschichte|Anamnese|Geschichte)(\s)?und</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52294,11 +51220,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0408</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Krankengeschichte|Anamnese|Geschichte)(\s)?ärztliche\sUntersuchung</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0408</IRI>
-        <Literal datatypeIRI="&xsd;string">(Krankengeschichte|Anamnese|Geschichte)(\s)?ärztliche\sUntersuchung</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52411,11 +51332,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(lückenhafte|mangelhafte|unzureichende)\s(Anamnese|Krankengeschichte|Geschichte)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0410</IRI>
-        <Literal datatypeIRI="&xsd;string">(lückenhafte|mangelhafte|unzureichende)\s(Anamnese|Krankengeschichte|Geschichte)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0410</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">lückenhafte Anamnese</Literal>
@@ -52474,11 +51390,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0411</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(soziale(r|en|es)\s(Hintergrund|Geschichte|Umstände|Bedingungen|Milieu)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0411</IRI>
-        <Literal datatypeIRI="&xsd;string">(soziale(r|en|es)\s(Hintergrund|Geschichte|Umstände|Bedingungen|Milieu)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52546,11 +51457,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(gram(-)?negativ.{02}\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0412</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(gram(-)?negativ.{02}\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0412</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">gramnegative</Literal>
@@ -52604,11 +51510,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0413</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}(\s(definitive{01}|eindeutige.{01}))?\s(Veränderung(en)?|Änderung(en)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0413</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}(\s(definitive{01}|eindeutige.{01}))?\s(Veränderung(en)?|Änderung(en)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52711,11 +51612,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}\s(Zunahme|Anstieg|Erhöhung)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0415</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}\s(Zunahme|Anstieg|Erhöhung)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0415</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein Anstieg</Literal>
@@ -52779,11 +51675,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0416</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(keine\sAuffälligkeit)|kein.{02}\s(signifikant.{02}|deutlich.{02}|wesentlich.{02}|maßgeblich.{02})\s(Änderung.{02}|Veränderung.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0416</IRI>
-        <Literal datatypeIRI="&xsd;string">(keine\sAuffälligkeit)|kein.{02}\s(signifikant.{02}|deutlich.{02}|wesentlich.{02}|maßgeblich.{02})\s(Änderung.{02}|Veränderung.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52851,11 +51742,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}\s(signifikant.{02}|deutlich.{02}|wesentlich.{02})|maßgeblich.{02})\sIntervallwechsel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0417</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}\s(signifikant.{02}|deutlich.{02}|wesentlich.{02})|maßgeblich.{02})\sIntervallwechsel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0417</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein signifikanter Intervallwechsel</Literal>
@@ -52904,11 +51790,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0418</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">kein.{02}(\s.*?)?\s(Auffälligkeit(en)?|Änderung(en)?|Veränderung(en)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0418</IRI>
-        <Literal datatypeIRI="&xsd;string">kein.{02}(\s.*?)?\s(Auffälligkeit(en)?|Änderung(en)?|Veränderung(en)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -52961,11 +51842,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht|keine)\s(verursacht|ausgelöst|(ein.{02}\s)?Ursache(en)?\sfür|(von|durch|mittels|auf\sGrund|aufgrund)\s.*?\b(verursacht|ausgelöst))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0419</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht|keine)\s(verursacht|ausgelöst|(ein.{02}\s)?Ursache(en)?\sfür|(von|durch|mittels|auf\sGrund|aufgrund)\s.*?\b(verursacht|ausgelöst))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0419</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -53011,11 +51887,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(fließt\snicht\sab|nicht\sabfließen|kein.{02}\sAbfluss)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0420</IRI>
-        <Literal datatypeIRI="&xsd;string">(fließt\snicht\sab|nicht\sabfließen|kein.{02}\sAbfluss)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0420</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -53059,11 +51930,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0421</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(nicht\s(verlängert|ausgedehnt)|kein.{02}\sVerlängerung)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0421</IRI>
-        <Literal datatypeIRI="&xsd;string">(nicht\s(verlängert|ausgedehnt)|kein.{02}\sVerlängerung)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
@@ -53218,27 +52084,12 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0424</IRI>
-        <Literal datatypeIRI="&xsd;string">&quot;r&quot;&quot;positive (study|exam|examination)( for)&quot;&quot;&quot;</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0424</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">positiv(studie|examination|undersökning)(för)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0424</IRI>
-        <Literal datatypeIRI="&xsd;string">positiv(studie|examination|undersökning)(för)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0424</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">positiv.{02}\s(Studie|Diagnose|Analyse|Untersuchung)\s(von|für|in\sBezug|auf|bezüglich|hinsichtlich)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0424</IRI>
-        <Literal datatypeIRI="&xsd;string">positiv.{02}\s(Studie|Diagnose|Analyse|Untersuchung)\s(von|für|in\sBezug|auf|bezüglich|hinsichtlich)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -53289,11 +52140,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0425</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">ohne\s(Schwierigkeit.{02}|Problem.{02}|problemlos.{02})</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0425</IRI>
-        <Literal datatypeIRI="&xsd;string">ohne\s(Schwierigkeit.{02}|Problem.{02}|problemlos.{02})</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -53349,11 +52195,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0426</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(schwierig|schwer)(s\zu)(\s.*?\s)(beurteilen|prüfen|zu\süberprüfen)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0426</IRI>
-        <Literal datatypeIRI="&xsd;string">(schwierig|schwer)(s\zu)(\s.*?\s)(beurteilen|prüfen|zu\süberprüfen)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -53444,11 +52285,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0428</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\b(ambig|zweideutig|doppeldeutig)\b</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0428</IRI>
-        <Literal datatypeIRI="&xsd;string">\b(ambig|zweideutig|doppeldeutig)\b</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -53558,17 +52394,7 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0430</IRI>
-        <Literal datatypeIRI="&xsd;string">(versus|vs.|vs|gegenüber)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0430</IRI>
         <Literal xml:lang="sv" datatypeIRI="&rdf;PlainLiteral">versus|\bvs\b|antingen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0430</IRI>
-        <Literal datatypeIRI="&xsd;string">versus|\bvs\b|antingen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -58991,11 +57817,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b\s(Daten|Information(en)?|Auffälligkeit(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)()?\sanzunehmen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0551</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b\s(Daten|Information(en)?|Auffälligkeit(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)()?\sanzunehmen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0551</IRI>
         <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">pas d&apos;indice qui suggère</Literal>
@@ -59051,11 +57872,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\b)\sIntervallwechsel</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0552</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\b)\sIntervallwechsel</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="#creator"/>
         <IRI>#I0552</IRI>
         <Literal datatypeIRI="&xsd;string">wwc</Literal>
@@ -59094,11 +57910,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0553</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">(Mammo(grafie(n)?|graphie(n)?)\szeigt(e|en)?\skeine\sAuffälligkeit(en)?|kein(e|en)?\smammo(grafischen|graphischen)\s(Hinweis(e)?|Anhaltspunkt(e)?|Beweis(e)?|Evidenz(en)?))</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0553</IRI>
-        <Literal datatypeIRI="&xsd;string">(Mammo(grafie(n)?|graphie(n)?)\szeigt(e|en)?\skeine\sAuffälligkeit(en)?|kein(e|en)?\smammo(grafischen|graphischen)\s(Hinweis(e)?|Anhaltspunkt(e)?|Beweis(e)?|Evidenz(en)?))</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -59144,11 +57955,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0554</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bkein.{02}\s(neue(en)?|weitere(n)?|radio(grafische(n)?|graphische(n)?))\s(Auffälligkeit(en)?|Daten|Information(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0554</IRI>
-        <Literal datatypeIRI="&xsd;string">\bkein.{02}\s(neue(en)?|weitere(n)?|radio(grafische(n)?|graphische(n)?))\s(Auffälligkeit(en)?|Daten|Information(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
@@ -59271,11 +58077,6 @@
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bschein(t|en)\b\snicht</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0557</IRI>
-        <Literal datatypeIRI="&xsd;string">\bschein(t|en)\b\snicht</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
         <IRI>#I0557</IRI>
         <Literal xml:lang="fr" datatypeIRI="&rdf;PlainLiteral">ne présente pas</Literal>
@@ -59344,11 +58145,6 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
         <IRI>#I0559</IRI>
         <Literal xml:lang="de" datatypeIRI="&rdf;PlainLiteral">\bohne\s(Verdacht(s\auf)?|Information(en)?|Auffälligkeit(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#regex"/>
-        <IRI>#I0559</IRI>
-        <Literal datatypeIRI="&xsd;string">\bohne\s(Verdacht(s\auf)?|Information(en)?|Auffälligkeit(en)?|Anhaltspunkt(e)?|Hinweis(e)?|Evidenz(en)?|Beweis(e)?|Nachweis(e)?)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/Terminology.owl#synonym"/>
