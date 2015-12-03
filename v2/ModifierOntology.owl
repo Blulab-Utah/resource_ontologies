@@ -63,9 +63,6 @@
         <Class IRI="#After_DocTimeRel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Anterior_BodyLaterality"/>
     </Declaration>
     <Declaration>
@@ -115,9 +112,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Cream_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#DP000094"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Decreased_DeltaFlag"/>
@@ -225,6 +219,9 @@
         <Class IRI="#Indication"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#IndicationType"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Inferior_BodyLaterality"/>
     </Declaration>
     <Declaration>
@@ -244,9 +241,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Intermittent_ContextualAspect"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Intolerance_AllergyIntoleranceType"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Intra-arterial_MedicationRoute"/>
@@ -384,15 +378,6 @@
         <Class IRI="#Patch_MedicationForm"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#PatientHasDoneRiskWithinPast30Days_SocialRiskStatus"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PatientHasNeverDoneRisk_SocialRiskStatus"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#PatientTooIllForRiskAssessment_SocialRiskStatus"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Patient_Experiencer"/>
     </Declaration>
     <Declaration>
@@ -465,6 +450,9 @@
         <Class IRI="#Soap_MedicationForm"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#SocialRiskQualifier"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Social_SocialRiskQualifier"/>
     </Declaration>
     <Declaration>
@@ -529,9 +517,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#UnitOfSocialRisk_Unit"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Unknown_AllergyIntoleranceType"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Vaginal_MedicationRoute"/>
@@ -1392,7 +1377,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AerosolSpray_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Aerosol_MedicationForm"/>
@@ -1408,10 +1393,6 @@
             <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
             <Class IRI="#PseudoFuture"/>
         </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <Class IRI="#DP000094"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ampule_unit_of_product_usage_Unit"/>
@@ -1514,7 +1495,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Buccal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#C_per_kg_Unit"/>
@@ -1873,7 +1854,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Frequent_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#GBq_per_mL_Unit"/>
@@ -1893,7 +1874,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gastric_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gel_MedicationForm"/>
@@ -1945,7 +1926,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Heavy_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Hedged_ContextualModality"/>
@@ -2013,7 +1994,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Implant_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Implant_unit_of_product_usage_Unit"/>
@@ -2065,7 +2046,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Indication"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#IndicationType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndicationType"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SemanticModifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Inferior_BodyLaterality"/>
@@ -2077,7 +2062,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Inhalation_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Inhalation_unit_of_product_usage_Unit"/>
@@ -2136,36 +2121,32 @@
         <Class IRI="#UnitOfBiologicalAndBiochemicalMeasurement_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Intolerance_AllergyIntoleranceType"/>
-        <Class IRI="#DP000094"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Intra-arterial_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intracardiac_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intradermal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intramuscular_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intraperiotoneal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intrathecal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Intravenous_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ipsilateral_BodyLaterality"/>
@@ -2293,7 +2274,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Light_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lingual_BodyLaterality"/>
@@ -2657,7 +2638,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Nebulizer_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Negative_OrdinalInterpretation"/>
@@ -2709,7 +2690,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Occasional_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ointment_MedicationForm"/>
@@ -2725,7 +2706,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Oral_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Osmolar_gap_serum_Unit"/>
@@ -2778,18 +2759,6 @@
     <SubClassOf>
         <Class IRI="#Patch_MedicationForm"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PatientHasDoneRiskWithinPast30Days_SocialRiskStatus"/>
-        <Class IRI="#DP000094"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PatientHasNeverDoneRisk_SocialRiskStatus"/>
-        <Class IRI="#DP000094"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#PatientTooIllForRiskAssessment_SocialRiskStatus"/>
-        <Class IRI="#DP000094"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Patient_Experiencer"/>
@@ -2913,7 +2882,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Rectal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RecurrentAcute_Course"/>
@@ -2977,15 +2946,19 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Significant_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Soap_MedicationForm"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SocialRiskQualifier"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SemanticModifier"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Social_SocialRiskQualifier"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Solution_MedicationForm"/>
@@ -3025,11 +2998,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Subcutaneous_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sublingual_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SuddenOnset_Course"/>
@@ -3101,7 +3074,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Topical_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#TotalPoints_Unit"/>
@@ -3113,7 +3086,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Transdermal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Transdermal_patch_Unit"/>
@@ -3121,7 +3094,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Transmucosal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Trillion_per_milliliter_Unit"/>
@@ -3392,10 +3365,6 @@
         <Class IRI="#UnitOfBiologicalAndBiochemicalMeasurement_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Unknown_AllergyIntoleranceType"/>
-        <Class IRI="#DP000094"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Unrecordable_OrdinalInterpretation"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#OrdinalInterpretation"/>
     </SubClassOf>
@@ -3405,7 +3374,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Vaginal_MedicationRoute"/>
-        <Class IRI="#DP000094"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Vaginal_insert_Unit"/>
@@ -21752,10 +21721,6 @@
         <NamedIndividual IRI="#I_00003124"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Intolerance_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_00003125"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Intra-arterial_MedicationRoute"/>
         <NamedIndividual IRI="#I_00003126"/>
     </ClassAssertion>
@@ -22112,10 +22077,6 @@
         <NamedIndividual IRI="#I_00003215"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Unknown_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_00003216"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Vaginal_MedicationRoute"/>
         <NamedIndividual IRI="#I_00003217"/>
     </ClassAssertion>
@@ -22134,10 +22095,6 @@
     <ClassAssertion>
         <Class IRI="#Visceral_BodyLaterality"/>
         <NamedIndividual IRI="#I_00003221"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_03000"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Abaxial_BodyLaterality"/>
@@ -22402,22 +22359,6 @@
     <ClassAssertion>
         <Class IRI="#Distal_BodyLaterality"/>
         <NamedIndividual IRI="#I_03066"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_03067"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_03068"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_03069"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Allergy_AllergyIntoleranceType"/>
-        <NamedIndividual IRI="#I_03070"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Changed_StatusChange"/>
@@ -31140,11 +31081,6 @@
         <AnnotationProperty IRI="#prefCUI"/>
         <IRI>#CyclicalRelapsing_Course</IRI>
         <Literal datatypeIRI="&xsd;string">C0439602</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP000094</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OLD</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#SOattribute"/>
