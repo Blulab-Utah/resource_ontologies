@@ -125,6 +125,9 @@
         <Class IRI="#TherapeuticProcedure"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#KA001005"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#adjacent_to"/>
     </Declaration>
     <Declaration>
@@ -1650,6 +1653,10 @@
         <ObjectProperty IRI="#functionally_related_to"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#KA001005"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAgeAbatement"/>
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
@@ -1901,6 +1908,10 @@
         <ObjectProperty IRI="#hasTemporality"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#KA001005"/>
+        <Class IRI="#Anchor"/>
+    </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodySite"/>
         <Class IRI="#BodySite"/>
@@ -2294,6 +2305,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Element</IRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">Mention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#KA001005</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAnchor</Literal>
     </AnnotationAssertion>
 </Ontology>
 
