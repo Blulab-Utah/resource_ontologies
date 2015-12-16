@@ -205,6 +205,9 @@
     <Declaration>
         <NamedIndividual IRI="#terminate"/>
     </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#windowSize"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Age"/>
         <Class IRI="#Quantity"/>
