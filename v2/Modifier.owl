@@ -57,9 +57,6 @@
         <Class IRI="#AerosolSpray_MedicationRoute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Aerosol_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#After_DocTimeRel"/>
     </Declaration>
     <Declaration>
@@ -90,9 +87,6 @@
         <Class IRI="#Buccal_MedicationRoute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Capsule_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Caudal_BodyLaterality"/>
     </Declaration>
     <Declaration>
@@ -109,9 +103,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Contralateral_BodyLaterality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Cream_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Decreased_DeltaFlag"/>
@@ -153,18 +144,6 @@
         <Class IRI="#Dorsoventral_BodyLaterality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Elixir_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Emulsion_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Enema_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#EyeDrop_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#FamilyMember_Experiencer"/>
     </Declaration>
     <Declaration>
@@ -183,9 +162,6 @@
         <Class IRI="#Gastric_MedicationRoute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Gel_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Generic_ContextualModality"/>
     </Declaration>
     <Declaration>
@@ -196,9 +172,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Hypothetical_ContextualModality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Implant_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Implant_MedicationRoute"/>
@@ -225,16 +198,10 @@
         <Class IRI="#Inferior_BodyLaterality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Inhalant_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Inhalation_MedicationRoute"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Initiates_ContextualAspect"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Injection_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Intermediate_BodyLaterality"/>
@@ -285,16 +252,7 @@
         <Class IRI="#Lingual_BodyLaterality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Liquid_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Little_Degree"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lotion_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Lozenge_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Maintained_DeltaFlag"/>
@@ -357,9 +315,6 @@
         <Class IRI="#Occasional_SocialRiskQualifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ointment_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Oral_MedicationRoute"/>
     </Declaration>
     <Declaration>
@@ -372,22 +327,10 @@
         <Class IRI="#Parietal_BodyLaterality"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Paste_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Patch_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Patient_Experiencer"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Pellet_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Permanent_Permanence"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Pill_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Points_Unit"/>
@@ -397,9 +340,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Posterior_BodyLaterality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Powder_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ProbableExistence_Certainty"/>
@@ -438,28 +378,16 @@
         <Class IRI="#Severe_Severity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Shampoo_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Significant_OrdinalInterpretation"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Significant_SocialRiskQualifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Soap_MedicationForm"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#SocialRiskQualifier"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Social_SocialRiskQualifier"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Solution_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Spray_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Stabilized_DeltaFlag"/>
@@ -475,15 +403,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Superior_BodyLaterality"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Suppository_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Syrup_MedicationForm"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Tablet_MedicationForm"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Terminates_ContextualAspect"/>
@@ -1241,28 +1160,28 @@
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Because_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#DefiniteNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Because_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#ProbableNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#But_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#DefiniteNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#But_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#ProbableNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1276,42 +1195,42 @@
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Patient_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#FamilyMember_Experiencer"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Presentation_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#FamilyMember_Experiencer"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#DefiniteNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#ProbableNegatedExistence_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#Uncertain_Certainty"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Which_Group"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#isTerminationTermOf"/>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#isTerminationOf"/>
             <Class IRI="#FamilyMember_Experiencer"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1378,10 +1297,6 @@
     <SubClassOf>
         <Class IRI="#AerosolSpray_MedicationRoute"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#After_DocTimeRel"/>
@@ -1506,10 +1421,6 @@
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Capsule_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Capsule_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
@@ -1586,10 +1497,6 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Cream_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Cup_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
@@ -1642,6 +1549,27 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
             <Class IRI="#PseudoNegation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DefiniteNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Because_Group"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DefiniteNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#But_Group"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DefiniteNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1769,18 +1697,6 @@
         <Class IRI="#UnitOfBiologicalAndBiochemicalMeasurement_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Elixir_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Emulsion_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Enema_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Episodic_Course"/>
         <Class IRI="#Intermittent_Course"/>
     </SubClassOf>
@@ -1809,12 +1725,22 @@
         <Class IRI="#Insert_unit_of_product_usage_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#EyeDrop_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
+        <Class IRI="#FamilyMember_Experiencer"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Experiencer"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FamilyMember_Experiencer"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Experiencer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Patient_Group"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FamilyMember_Experiencer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Which_Group"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fatal_Severity"/>
@@ -1875,10 +1801,6 @@
     <SubClassOf>
         <Class IRI="#Gastric_MedicationRoute"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Gel_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Generic_ContextualModality"/>
@@ -1989,10 +1911,6 @@
         <Class IRI="#UnitOfBiologicalAndBiochemicalMeasurement_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Implant_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Implant_MedicationRoute"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
@@ -2057,10 +1975,6 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Inhalant_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Inhalation_MedicationRoute"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationRoute"/>
     </SubClassOf>
@@ -2071,10 +1985,6 @@
     <SubClassOf>
         <Class IRI="#Initiates_ContextualAspect"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#ContextualAspect"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Injection_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Insert_unit_of_product_usage_Unit"/>
@@ -2281,10 +2191,6 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Liquid_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Little_Degree"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Degree"/>
     </SubClassOf>
@@ -2297,16 +2203,8 @@
         <Class IRI="#UnitOfMathematicalAnalysis_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Lotion_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Low_OrdinalInterpretation"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#OrdinalInterpretation"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Lozenge_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Lozenge_unit_of_product_usage_Unit"/>
@@ -2693,10 +2591,6 @@
         <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Ointment_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#OnePlus_OrdinalInterpretation"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#OrdinalInterpretation"/>
     </SubClassOf>
@@ -2753,20 +2647,8 @@
         <Class IRI="#UnitOfPressure_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Paste_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Patch_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Patient_Experiencer"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Experiencer"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Pellet_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Pellet_unit_of_product_usage_Unit"/>
@@ -2797,10 +2679,6 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Permanence"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Pill_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Points_Unit"/>
         <Class IRI="#UnitOfScore_Unit"/>
     </SubClassOf>
@@ -2817,16 +2695,33 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Powder_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ProbableExistence_Certainty"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Certainty"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ProbableNegatedExistence_Certainty"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Certainty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbableNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Because_Group"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbableNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#But_Group"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProbableNegatedExistence_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Proximal_BodyLaterality"/>
@@ -2937,20 +2832,12 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Severity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Shampoo_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Significant_OrdinalInterpretation"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#OrdinalInterpretation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Significant_SocialRiskQualifier"/>
         <Class IRI="#SocialRiskQualifier"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Soap_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SocialRiskQualifier"/>
@@ -2961,20 +2848,12 @@
         <Class IRI="#SocialRiskQualifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Solution_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Sperms_per_mL_Unit"/>
         <Class IRI="#UnitOfBiologicalAndBiochemicalMeasurement_Unit"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sponge_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Spray_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Spray_unit_of_product_usage_Unit"/>
@@ -3017,10 +2896,6 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Suppository_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Suppository_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
@@ -3033,20 +2908,12 @@
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Syrup_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Tablespoon_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfDrugAdministration_Unit"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tablespoon_unit_of_product_usage_Unit"/>
         <Class IRI="#UnitOfVolume_Unit"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Tablet_MedicationForm"/>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#MedicationForm"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Tablet_unit_of_product_usage_Unit"/>
@@ -3155,6 +3022,13 @@
     <SubClassOf>
         <Class IRI="#Uncertain_Certainty"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Certainty"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Uncertain_Certainty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasTermination"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#SecondaryTo_Group"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Unchanged_Course"/>
@@ -21601,22 +21475,6 @@
         <NamedIndividual IRI="#I_00003094"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Elixir_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003095"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Emulsion_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003096"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Enema_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003097"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#EyeDrop_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003098"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Fatal_Severity"/>
         <NamedIndividual IRI="#I_00003099"/>
     </ClassAssertion>
@@ -21649,20 +21507,12 @@
         <NamedIndividual IRI="#I_00003106"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Gel_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003107"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Heavy_SocialRiskQualifier"/>
         <NamedIndividual IRI="#I_00003108"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Heavy_SocialRiskQualifier"/>
         <NamedIndividual IRI="#I_00003109"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Implant_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003110"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Implant_MedicationRoute"/>
@@ -21689,10 +21539,6 @@
         <NamedIndividual IRI="#I_00003116"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Inhalant_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003117"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Inhalation_MedicationRoute"/>
         <NamedIndividual IRI="#I_00003118"/>
     </ClassAssertion>
@@ -21707,10 +21553,6 @@
     <ClassAssertion>
         <Class IRI="#Initiates_ContextualAspect"/>
         <NamedIndividual IRI="#I_00003121"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Injection_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003122"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Intermediate_BodyLaterality"/>
@@ -21773,20 +21615,8 @@
         <NamedIndividual IRI="#I_00003138"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Liquid_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003139"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Little_Degree"/>
         <NamedIndividual IRI="#I_00003140"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Lotion_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003141"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Lozenge_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003142"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Male_Gender"/>
@@ -21881,10 +21711,6 @@
         <NamedIndividual IRI="#I_00003165"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ointment_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003167"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#OnePlus_OrdinalInterpretation"/>
         <NamedIndividual IRI="#I_00003168"/>
     </ClassAssertion>
@@ -21897,32 +21723,12 @@
         <NamedIndividual IRI="#I_00003170"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Paste_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003171"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Patch_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003172"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Pellet_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003173"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Permanent_Permanence"/>
         <NamedIndividual IRI="#I_00003174"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Pill_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003175"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Posterior_BodyLaterality"/>
         <NamedIndividual IRI="#I_00003176"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Powder_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003177"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Proximal_BodyLaterality"/>
@@ -21949,10 +21755,6 @@
         <NamedIndividual IRI="#I_00003183"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Shampoo_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003184"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Significant_OrdinalInterpretation"/>
         <NamedIndividual IRI="#I_00003185"/>
     </ClassAssertion>
@@ -21961,24 +21763,12 @@
         <NamedIndividual IRI="#I_00003186"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Soap_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003187"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Social_SocialRiskQualifier"/>
         <NamedIndividual IRI="#I_00003188"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Social_SocialRiskQualifier"/>
         <NamedIndividual IRI="#I_00003189"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Solution_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003190"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Spray_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003191"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Subcutaneous_MedicationRoute"/>
@@ -21995,18 +21785,6 @@
     <ClassAssertion>
         <Class IRI="#Superior_BodyLaterality"/>
         <NamedIndividual IRI="#I_00003195"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Suppository_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003196"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Syrup_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003197"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Tablet_MedicationForm"/>
-        <NamedIndividual IRI="#I_00003198"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Terminates_ContextualAspect"/>
@@ -22129,26 +21907,6 @@
         <NamedIndividual IRI="#I_03008"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <NamedIndividual IRI="#I_03009"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <NamedIndividual IRI="#I_03010"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <NamedIndividual IRI="#I_03011"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <NamedIndividual IRI="#I_03012"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Aerosol_MedicationForm"/>
-        <NamedIndividual IRI="#I_03013"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Anterior_BodyLaterality"/>
         <NamedIndividual IRI="#I_03014"/>
     </ClassAssertion>
@@ -22211,22 +21969,6 @@
     <ClassAssertion>
         <Class IRI="#Buccal_MedicationRoute"/>
         <NamedIndividual IRI="#I_03029"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Capsule_MedicationForm"/>
-        <NamedIndividual IRI="#I_03030"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Capsule_MedicationForm"/>
-        <NamedIndividual IRI="#I_03031"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Capsule_MedicationForm"/>
-        <NamedIndividual IRI="#I_03032"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Capsule_MedicationForm"/>
-        <NamedIndividual IRI="#I_03033"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Caudal_BodyLaterality"/>
@@ -22327,10 +22069,6 @@
     <ClassAssertion>
         <Class IRI="#Contralateral_BodyLaterality"/>
         <NamedIndividual IRI="#I_03058"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cream_MedicationForm"/>
-        <NamedIndividual IRI="#I_03059"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Deep_BodyLaterality"/>
@@ -30514,8 +30252,8 @@
         <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#forward"/>
     </ObjectPropertyAssertion>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#hasTermination"/>
         <ObjectProperty IRI="#isTerminationTermOf"/>
+        <ObjectProperty IRI="#hasTermination"/>
     </InverseObjectProperties>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#SOattribute"/>
