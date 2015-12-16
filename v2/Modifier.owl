@@ -489,12 +489,6 @@
         <Class IRI="#packs_Unit"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasTermination"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#isTerminationTermOf"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#I4985"/>
     </Declaration>
     <Declaration>
@@ -1150,12 +1144,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#I_03072"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#author"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty IRI="#contributor"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Because_Group"/>
@@ -30251,10 +30239,6 @@
         <NamedIndividual IRI="#I0560"/>
         <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#forward"/>
     </ObjectPropertyAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="#isTerminationTermOf"/>
-        <ObjectProperty IRI="#hasTermination"/>
-    </InverseObjectProperties>
     <AnnotationAssertion>
         <AnnotationProperty IRI="#SOattribute"/>
         <IRI>#ACE_unit_Unit</IRI>
