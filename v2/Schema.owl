@@ -236,6 +236,9 @@
         <ObjectProperty IRI="#hasCertainty"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCompSummary"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasCompletionStatus"/>
     </Declaration>
     <Declaration>
@@ -748,6 +751,13 @@
     <SubClassOf>
         <Class IRI="#Composition"/>
         <Class IRI="#Annotation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCompSummary"/>
+            <Class IRI="#Summary"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composition"/>
@@ -1333,6 +1343,10 @@
         <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCompSummary"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompletionStatus"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
@@ -1685,6 +1699,10 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCompSummary"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompletionStatus"/>
         <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
@@ -1923,6 +1941,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodySiteModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCompSummary"/>
+        <Class IRI="#Summary"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposition"/>
