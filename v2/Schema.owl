@@ -236,9 +236,6 @@
         <ObjectProperty IRI="#hasCertainty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCompSummary"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#hasCompletionStatus"/>
     </Declaration>
     <Declaration>
@@ -246,6 +243,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCompositionModifier"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCompositionSummary"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasContent"/>
@@ -755,7 +755,7 @@
     <SubClassOf>
         <Class IRI="#Composition"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasCompSummary"/>
+            <ObjectProperty IRI="#hasCompositionSummary"/>
             <Class IRI="#Summary"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -1343,10 +1343,6 @@
         <ObjectProperty IRI="#hasLinguisticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasCompSummary"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompletionStatus"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
@@ -1357,6 +1353,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionModifier"/>
         <ObjectProperty IRI="#hasModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasCompositionSummary"/>
+        <ObjectProperty IRI="#hasCompositionModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContent"/>
@@ -1699,10 +1699,6 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCompSummary"/>
-        <Class IRI="#Composition"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompletionStatus"/>
         <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
@@ -1712,6 +1708,10 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCompositionModifier"/>
+        <Class IRI="#Composition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasCompositionSummary"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1943,16 +1943,16 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCompSummary"/>
-        <Class IRI="#Summary"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasComposition"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompositionModifier"/>
         <Class IRI="#CompositionAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasCompositionSummary"/>
+        <Class IRI="#Summary"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasContent"/>
