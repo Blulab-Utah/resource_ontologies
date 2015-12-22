@@ -62,9 +62,6 @@
         <Class IRI="#Condition"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#DP000088"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#DiagnosticProcedure"/>
     </Declaration>
     <Declaration>
@@ -120,6 +117,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#SummaryAttribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SummaryModel"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TherapeuticProcedure"/>
@@ -2318,11 +2318,6 @@
         <DataProperty IRI="#wasNotGiven"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#DP000088</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">SummaryModel</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#Element</IRI>
