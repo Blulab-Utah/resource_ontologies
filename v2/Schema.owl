@@ -125,9 +125,6 @@
         <Class IRI="#TherapeuticProcedure"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#KA001005"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#adjacent_to"/>
     </Declaration>
     <Declaration>
@@ -225,6 +222,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAgeRange"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasAnchor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasBodySite"/>
@@ -687,7 +687,7 @@
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#hasQuantityValue"/>
-            <Datatype abbreviatedIRI="xsd:float"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1730,16 +1730,16 @@
         <ObjectProperty IRI="#functionally_related_to"/>
     </SubObjectPropertyOf>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#KA001005"/>
-        <Class IRI="#Annotation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAgeAbatement"/>
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAgeOnset"/>
         <Class IRI="#Condition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasAnchor"/>
+        <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasBodySite"/>
@@ -1990,7 +1990,7 @@
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#KA001005"/>
+        <ObjectProperty IRI="#hasAnchor"/>
         <Class IRI="#Anchor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2339,7 +2339,7 @@
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasQuantityValue"/>
-        <Datatype abbreviatedIRI="xsd:float"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasReasonNotTaken"/>
@@ -2388,7 +2388,7 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#KA001005</IRI>
+        <IRI>#hasAnchor</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hasAnchor</Literal>
     </AnnotationAssertion>
 </Ontology>
