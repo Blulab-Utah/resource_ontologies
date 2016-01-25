@@ -482,6 +482,9 @@
         <ObjectProperty IRI="#uses"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#wasDerivedFrom"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#asNeededBoolean"/>
     </Declaration>
     <Declaration>
