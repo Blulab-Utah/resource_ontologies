@@ -74,9 +74,6 @@
         <Class IRI="#DocumentSection"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Element"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Encounter"/>
     </Declaration>
     <Declaration>
@@ -98,6 +95,9 @@
         <Class IRI="#Finding"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#MedicalRecord"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MedicationStatement"/>
     </Declaration>
     <Declaration>
@@ -108,6 +108,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SectionType"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SignSymptom"/>
@@ -242,7 +245,7 @@
         <ObjectProperty IRI="#hasComposition"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCompositionSummary"/>
@@ -284,7 +287,10 @@
         <ObjectProperty IRI="#hasEncounter"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEpisodeModifier"/>
+        <ObjectProperty IRI="#hasEntry"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEpisodeType"/>
@@ -314,7 +320,13 @@
         <ObjectProperty IRI="#hasLowQuantity"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasMaritalStatus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMedication"/>
@@ -342,9 +354,6 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPermanence"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -497,6 +506,9 @@
         <DataProperty IRI="#hasAllergyIntoleranceType"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasAnnotationType"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasBirthDate"/>
     </Declaration>
     <Declaration>
@@ -507,6 +519,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasConditionCategory"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasCorpus"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasCurrentNumberProcedure"/>
@@ -522,6 +537,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDeathDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasDocumentID"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasFirstName"/>
@@ -790,6 +808,38 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Annotation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasAnnotationType"/>
+            <DataOneOf>
+                <Literal datatypeIRI="&rdf;PlainLiteral">document</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">mention</Literal>
+                <Literal datatypeIRI="&rdf;PlainLiteral">record</Literal>
+            </DataOneOf>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Annotation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasCorpus"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Annotation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasDocumentID"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Annotation"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasSpan"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BodySite"/>
         <Class IRI="#Entity"/>
     </SubClassOf>
@@ -816,13 +866,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composition"/>
-        <Class IRI="#Annotation"/>
+        <Class IRI="#Summary"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Composition"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasCompositionSummary"/>
-            <Class IRI="#Summary"/>
+            <Class IRI="#SummaryModel"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -844,6 +894,13 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasPatient"/>
             <Class IRI="#Patient"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Composition"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSection"/>
+            <Class IRI="#DocumentSection"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -871,8 +928,11 @@
     <SubClassOf>
         <Class IRI="#CompositionEvent"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasEvent"/>
-            <Class IRI="#Element"/>
+            <ObjectProperty IRI="#hasDetail"/>
+            <ObjectUnionOf>
+                <Class IRI="#Annotation"/>
+                <Class IRI="#SummaryModel"/>
+            </ObjectUnionOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -982,18 +1042,28 @@
     <SubClassOf>
         <Class IRI="#DocumentSection"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasContent"/>
-            <Class IRI="#Element"/>
+            <ObjectProperty IRI="#hasEntry"/>
+            <Class IRI="#Annotation"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Element"/>
-        <Class IRI="#Annotation"/>
+        <Class IRI="#DocumentSection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSection"/>
+            <Class IRI="#DocumentSection"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Element"/>
+        <Class IRI="#DocumentSection"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasSectionType"/>
+            <Class IRI="#SectionType"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DocumentSection"/>
         <DataSomeValuesFrom>
-            <DataProperty IRI="#hasSpan"/>
+            <DataProperty IRI="#hasTitle"/>
             <Datatype abbreviatedIRI="xsd:string"/>
         </DataSomeValuesFrom>
     </SubClassOf>
@@ -1017,11 +1087,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Entity"/>
-        <Class IRI="#Element"/>
+        <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Episode"/>
-        <Class IRI="#Annotation"/>
+        <Class IRI="#Summary"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Episode"/>
@@ -1047,11 +1117,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Event"/>
-        <Class IRI="#Element"/>
+        <Class IRI="#Annotation"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Finding"/>
         <Class IRI="#Condition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalRecord"/>
+        <Class IRI="#Summary"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MedicationStatement"/>
@@ -1228,12 +1302,12 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SignSymptom"/>
-        <Class IRI="#Condition"/>
+        <Class IRI="#SectionType"/>
+        <Class IRI="#CompositionAttribute"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Summary"/>
-        <Class IRI="#Annotation"/>
+        <Class IRI="#SignSymptom"/>
+        <Class IRI="#Condition"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SummaryAttribute"/>
@@ -1414,19 +1488,19 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasComposition"/>
-        <ObjectProperty IRI="#hasEpisodeModifier"/>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
-        <ObjectProperty IRI="#hasModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasCompositionSummary"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContent"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasContextualAspect"/>
@@ -1454,11 +1528,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDetail"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDocType"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosage"/>
@@ -1473,16 +1547,20 @@
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasEpisodeModifier"/>
-        <ObjectProperty IRI="#hasModifier"/>
+        <ObjectProperty IRI="#hasEntry"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEpisodeType"/>
-        <ObjectProperty IRI="#hasEpisodeModifier"/>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasEvent"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasExperiencer"/>
@@ -1513,8 +1591,16 @@
         <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMaritalStatus"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasMedication"/>
@@ -1542,7 +1628,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPatient"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPatient"/>
@@ -1551,10 +1637,6 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPermanence"/>
         <ObjectProperty IRI="#hasLinguisticModifier"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <ObjectProperty IRI="#hasModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -1582,11 +1664,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSection"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSectionType"/>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasSemanticModifier"/>
@@ -1773,7 +1855,7 @@
         <Class IRI="#Episode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1833,7 +1915,11 @@
         <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasEpisodeModifier"/>
+        <ObjectProperty IRI="#hasEntry"/>
+        <Class IRI="#DocumentSection"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasEpisodeAttribute"/>
         <Class IRI="#Episode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1861,8 +1947,20 @@
         <Class IRI="#Annotation"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
+        <Class IRI="#Summary"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
+        <Class IRI="#SummaryAttribute"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMaritalStatus"/>
         <Class IRI="#Patient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
+        <Class IRI="#MedicalRecord"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasMedication"/>
@@ -1919,14 +2017,6 @@
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPermanence"/>
         <Class IRI="#Event"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#Summary"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#SummaryAttribute"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPolarity"/>
@@ -2013,20 +2103,16 @@
         <Class IRI="#Composition"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCompositionModifier"/>
+        <ObjectProperty IRI="#hasCompositionAttribute"/>
         <Class IRI="#CompositionAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompositionSummary"/>
-        <Class IRI="#Summary"/>
+        <Class IRI="#Annotation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasContent"/>
-        <Class IRI="#Element"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDetail"/>
-        <Class IRI="#Element"/>
+        <ObjectProperty IRI="#hasCompositionSummary"/>
+        <Class IRI="#SummaryModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDocType"/>
@@ -2037,12 +2123,28 @@
         <Class IRI="#Encounter"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasEntry"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEpisodeType"/>
         <Class IRI="#EpisodeType"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
         <Class IRI="#CompositionEvent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMRSummaryAttribute"/>
+        <Class IRI="#SummaryAttribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
+        <Class IRI="#SummaryModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
@@ -2055,10 +2157,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasPatient"/>
         <Class IRI="#Patient"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasPhenotypicAttribute"/>
-        <Class IRI="#SummaryAttribute"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasReasonForUse"/>
@@ -2117,16 +2215,25 @@
         <DataProperty IRI="#hasAllergyIntoleranceType"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasAnnotationType"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasBirthDate"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasConditionCategory"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
+        <DataProperty IRI="#hasCorpus"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
         <DataProperty IRI="#hasDateOfComposition"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#hasDeathDate"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#hasDocumentID"/>
     </FunctionalDataProperty>
     <FunctionalDataProperty>
         <DataProperty IRI="#isDeceased"/>
@@ -2150,6 +2257,10 @@
         <Class IRI="#AllergyIntolerance"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#hasAnnotationType"/>
+        <Class IRI="#Annotation"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#hasBirthDate"/>
         <Class IRI="#Patient"/>
     </DataPropertyDomain>
@@ -2164,6 +2275,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasConditionCategory"/>
         <Class IRI="#Condition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasCorpus"/>
+        <Class IRI="#Annotation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasCurrentNumberProcedure"/>
@@ -2184,6 +2299,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasDeathDate"/>
         <Class IRI="#Patient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasDocumentID"/>
+        <Class IRI="#Annotation"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasFromLocation"/>
@@ -2212,6 +2331,10 @@
     <DataPropertyDomain>
         <DataProperty IRI="#hasTitle"/>
         <Class IRI="#Composition"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hasTitle"/>
+        <Class IRI="#DocumentSection"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#hasToLocation"/>
@@ -2254,6 +2377,14 @@
         <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasAnnotationType"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">document</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">mention</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">record</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasBirthDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
     </DataPropertyRange>
@@ -2275,6 +2406,10 @@
         </DataOneOf>
     </DataPropertyRange>
     <DataPropertyRange>
+        <DataProperty IRI="#hasCorpus"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
         <DataProperty IRI="#hasCurrentNumberProcedure"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
@@ -2293,6 +2428,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#hasDeathDate"/>
         <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hasDocumentID"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#hasFirstName"/>
@@ -2384,11 +2523,6 @@
         <DataProperty IRI="#wasNotGiven"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Element</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Mention</Literal>
-    </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAnchor</IRI>
