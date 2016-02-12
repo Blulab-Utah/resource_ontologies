@@ -392,6 +392,12 @@
         <ObjectProperty IRI="#hasStage"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasStageAssessment"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStageSummary"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasStatusChange"/>
     </Declaration>
     <Declaration>
@@ -737,6 +743,20 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasNumerator"/>
             <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Stage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStageAssessment"/>
+            <Class IRI="#Finding"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Stage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasStageSummary"/>
+            <Class IRI="#Finding"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1690,6 +1710,14 @@
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStageAssessment"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStageSummary"/>
+        <ObjectProperty IRI="#hasSemanticModifier"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasStatusChange"/>
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </SubObjectPropertyOf>
@@ -2078,6 +2106,18 @@
         <Class IRI="#Condition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStageAssessment"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Stage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStageAssessment"/>
+        <Class IRI="#Finding"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasStageSummary"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Stage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasStatusChange"/>
         <Class IRI="#MedicationStatement"/>
     </ObjectPropertyDomain>
@@ -2196,6 +2236,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSeverity"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Severity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasStageSummary"/>
+        <Class IRI="#Finding"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasSubstance"/>
