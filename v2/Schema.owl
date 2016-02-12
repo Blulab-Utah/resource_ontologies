@@ -940,13 +940,6 @@
     <SubClassOf>
         <Class IRI="#Composition"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasCompositionSummary"/>
-            <Class IRI="#SummaryModel"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Composition"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasDocType"/>
             <Class IRI="#DocumentOntology"/>
         </ObjectSomeValuesFrom>
@@ -1201,13 +1194,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEpisode"/>
             <Class IRI="#Episode"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#MedicalRecord"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasMedicalRecordSummary"/>
-            <Class IRI="#SummaryModel"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
