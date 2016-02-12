@@ -1192,6 +1192,13 @@
     <SubClassOf>
         <Class IRI="#MedicalRecord"/>
         <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasComposition"/>
+            <Class IRI="#Composition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MedicalRecord"/>
+        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEpisode"/>
             <Class IRI="#Episode"/>
         </ObjectSomeValuesFrom>
