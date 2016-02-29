@@ -47,9 +47,6 @@
         <Class IRI="#Attribute"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#BodySite"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Composition"/>
     </Declaration>
     <Declaration>
@@ -117,9 +114,6 @@
     </Declaration>
     <Declaration>
         <Class IRI="#SummaryAttribute"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SummaryModel"/>
     </Declaration>
     <Declaration>
         <Class IRI="#TherapeuticProcedure"/>
@@ -645,6 +639,20 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySiteModifier"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasBodySiteModifier"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DimensionalMeasurement"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#has1dimension"/>
@@ -663,13 +671,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#has3dimension"/>
             <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Dosage"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySite"/>
-            <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -909,31 +910,6 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#BodySite"/>
-        <Class IRI="#Entity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BodySite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySiteModifier"/>
-            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BodySite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySiteModifier"/>
-            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodySide"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#BodySite"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasPatient"/>
-            <Class IRI="#Patient"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Composition"/>
         <Class IRI="#Summary"/>
     </SubClassOf>
@@ -992,13 +968,6 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasAgeOnset"/>
             <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Age"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Condition"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySite"/>
-            <Class IRI="#BodySite"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1256,13 +1225,6 @@
     <SubClassOf>
         <Class IRI="#Observation"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySite"/>
-            <Class IRI="#BodySite"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Observation"/>
-        <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#hasEncounter"/>
             <Class IRI="#Encounter"/>
         </ObjectSomeValuesFrom>
@@ -1348,13 +1310,6 @@
     <SubClassOf>
         <Class IRI="#Procedure"/>
         <Class IRI="#Event"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Procedure"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasBodySite"/>
-            <Class IRI="#BodySite"/>
-        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Procedure"/>
@@ -1942,10 +1897,6 @@
         <Class IRI="#Procedure"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasBodySiteModifier"/>
-        <Class IRI="#BodySite"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasCertainty"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
@@ -2107,10 +2058,6 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasPatient"/>
-        <Class IRI="#BodySite"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasPatient"/>
         <Class IRI="#Composition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -2214,10 +2161,6 @@
         <Class IRI="#Anchor"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasBodySite"/>
-        <Class IRI="#BodySite"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
         <ObjectProperty IRI="#hasBodySiteModifier"/>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#BodyModifier"/>
     </ObjectPropertyRange>
@@ -2236,10 +2179,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasCompositionSummary"/>
         <Class IRI="#Annotation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasCompositionSummary"/>
-        <Class IRI="#SummaryModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasDocType"/>
@@ -2276,10 +2215,6 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMedicalRecordSummary"/>
         <Class IRI="#Annotation"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMedicalRecordSummary"/>
-        <Class IRI="#SummaryModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasMethod"/>
