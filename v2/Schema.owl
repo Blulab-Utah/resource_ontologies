@@ -1531,11 +1531,11 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeAbatement"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeOnset"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasAgeRange"/>
@@ -1599,7 +1599,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosage"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasDosageQuantity"/>
@@ -1683,7 +1683,7 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumValue"/>
-        <ObjectProperty IRI="#hasSemanticModifier"/>
+        <ObjectProperty IRI="#hasNumericModifier"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasNumericModifier"/>
