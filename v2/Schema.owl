@@ -281,6 +281,9 @@
         <ObjectProperty IRI="#hasEvent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasExclusion"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasExperiencer"/>
     </Declaration>
     <Declaration>
@@ -2010,6 +2013,14 @@
         <Class IRI="#Episode"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExclusion"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasExclusion"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasExperiencer"/>
         <Class IRI="#Event"/>
     </ObjectPropertyDomain>
@@ -2223,6 +2234,14 @@
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hasEvent"/>
+        <Class IRI="#Annotation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExclusion"/>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Modifier"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasExclusion"/>
         <Class IRI="#Annotation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
