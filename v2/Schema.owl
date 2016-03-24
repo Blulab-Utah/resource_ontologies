@@ -898,6 +898,13 @@
         </DataSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Anchor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+            <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Pseudo"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Annotation"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#wasDerivedFrom"/>
@@ -1892,6 +1899,10 @@
         <ObjectProperty IRI="#uses"/>
         <ObjectProperty IRI="#functionally_related_to"/>
     </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasPseudo"/>
+        <Class IRI="#Anchor"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasAgeAbatement"/>
         <Class IRI="#Condition"/>
