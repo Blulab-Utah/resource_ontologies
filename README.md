@@ -5,12 +5,12 @@
 <p>To suggest any edits to the following ontologies, please submit an Issue here.</p>
 
 <p>The ontologies can also be opened by using the following URIs in an ontology editor:
-<li>
-<ul>Schema: http://blulab.chpc.utah.edu/ontologies/v2/Schema.owl</ul>
-<ul>Modifier: http://blulab.chpc.utah.edu/ontologies/v2/Modifier.owl</ul>
-<ul>ConText: http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl</ul>
-<ul>TermMapping: http://blulab.chpc.utah.edu/ontologies/TermMapping.owl</ul>
-</li></p>
+<ul>
+<li>Schema: http://blulab.chpc.utah.edu/ontologies/v2/Schema.owl</li>
+<li>Modifier: http://blulab.chpc.utah.edu/ontologies/v2/Modifier.owl</li>
+<li>ConText: http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl</li>
+<li>TermMapping: http://blulab.chpc.utah.edu/ontologies/TermMapping.owl</li>
+</ul></p>
 
 <p><strong>TermMapping.owl</strong>: This file contains a list of annotation properties to hold preferredTerms, synonymns, misspellings, codes, alternateCodes, and regex. It is imported into all of the other files.</p> 
 
