@@ -4,6 +4,14 @@
 
 <p>To suggest any edits to the following ontologies, please submit an Issue here.</p>
 
+<p>The ontologies can also be opened by using the following URIs in an ontology editor:
+<li>
+<ul>Schema: http://blulab.chpc.utah.edu/ontologies/v2/Schema.owl</ul>
+<ul>Modifier: http://blulab.chpc.utah.edu/ontologies/v2/Modifier.owl</ul>
+<ul>ConText: http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl</ul>
+<ul>TermMapping: http://blulab.chpc.utah.edu/ontologies/TermMapping.owl</ul>
+</li></p>
+
 <p><strong>TermMapping.owl</strong>: This file contains a list of annotation properties to hold preferredTerms, synonymns, misspellings, codes, alternateCodes, and regex. It is imported into all of the other files.</p> 
 
 <p><strong>ConText.owl</strong>: This file contains a set of classes and object properties to specify the components of the ConText algorithm developed by the BLU Lab. The components consist of classes to describe the modifiers, termination terms, pseudo terms and actions needed for an NLP system to extract modifiers related to a potential anchor/target. This file is imported and used by both the Modifer.owl and Schema.owl files.</p>
