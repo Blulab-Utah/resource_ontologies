@@ -1,7 +1,21 @@
-# resource_ontologies
+# Lexical Resource Ontologies
 
-The files in the repository are the reference ontologies created and used in by the BLU Lab. All versions of the ontology are protected under the Creative Commons Attribution 4.0 International Public License (see https://creativecommons.org/licenses/by/4.0/legalcode).
+<p>The files in the repository are the lexical resource ontologies created by and used in the <a href="http://blulab.chpc.utah.edu">BLU Lab</a>. All versions of the ontology are protected under the <a href="https://creativecommons.org/licenses/by/4.0/legalcode">Creative Commons Attribution 4.0 International Public License</a>.</p>
 
-v1 - contains the files that are currently housed at the http://blulab.chpc.utah.edu/ontologies URIs.
-v2 - contains the changes to the original files to make the ontologies more FHIR compliant as well as the new modifier ontology library.
+<p>To suggest any edits to the following ontologies, please submit an Issue here.</p>
 
+<p>The ontologies can also be opened by using the following URIs in an ontology editor:
+<ul>
+<li>Schema: http://blulab.chpc.utah.edu/ontologies/v2/Schema.owl</li>
+<li>Modifier: http://blulab.chpc.utah.edu/ontologies/v2/Modifier.owl</li>
+<li>ConText: http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl</li>
+<li>TermMapping: http://blulab.chpc.utah.edu/ontologies/TermMapping.owl</li>
+</ul></p>
+
+<p><strong>TermMapping.owl</strong>: This file contains a list of annotation properties to hold preferredTerms, synonymns, misspellings, codes, alternateCodes, and regex. It is imported into all of the other files.</p> 
+
+<p><strong>ConText.owl</strong>: This file contains a set of classes and object properties to specify the components of the ConText algorithm developed by the BLU Lab. The components consist of classes to describe the modifiers, termination terms, pseudo terms and actions needed for an NLP system to extract modifiers related to a potential anchor/target. This file is imported and used by both the Modifer.owl and Schema.owl files.</p>
+
+<p><strong>Modifier.owl</strong>: This file extends the ConText.owl file to include a hierarchy of modifier terms that are beneficial for biomedical NLP information extraction. Also, included are instances that contain the lexical cues for each modifier class.</p>
+
+<p><strong>Schema.owl</strong>: This file contains an NLP schema that models the types of annotations that can be created from NLP systems. It contains a hierarcy of semantic categories that can be associated with certain linguistic and semantic modifiers. This file is imported into a domain ontology to create domain specific variables for extraction. </p>
