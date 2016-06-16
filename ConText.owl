@@ -14,10 +14,10 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Import>http://blulab.chpc.utah.edu/ontologies/TermMapping.owl</Import>
     <Declaration>
-        <DataProperty IRI="#KA000420"/>
+        <Class IRI="#Stage"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Stage"/>
+        <ObjectProperty IRI="#hasDefaultDefinition"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MaritalStatus"/>
@@ -27,6 +27,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Temporality"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#isDefaultValue"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NumericModifier"/>
@@ -47,10 +50,10 @@
         <Class IRI="#LinguisticModifier"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#terminate"/>
+        <Class IRI="#Quantity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Quantity"/>
+        <NamedIndividual IRI="#terminate"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#forward"/>
@@ -62,13 +65,13 @@
         <Class IRI="#Patient_Group"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Presentation_Group"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasAction"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Polarity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Presentation_Group"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#discontinuous"/>
@@ -140,9 +143,6 @@
         <ObjectProperty IRI="#hasActionSv"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#KA000419"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Age"/>
     </Declaration>
     <Declaration>
@@ -191,10 +191,10 @@
         <Class IRI="#EthnicGroup"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SemanticModifier"/>
+        <Class IRI="#Severity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Severity"/>
+        <Class IRI="#SemanticModifier"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Modifier"/>
@@ -475,14 +475,14 @@
         <Class IRI="#Modifier"/>
     </ObjectPropertyRange>
     <FunctionalDataProperty>
-        <DataProperty IRI="#KA000420"/>
+        <DataProperty IRI="#isDefaultValue"/>
     </FunctionalDataProperty>
     <DataPropertyDomain>
-        <DataProperty IRI="#KA000420"/>
+        <DataProperty IRI="#isDefaultValue"/>
         <Class IRI="#Modifier"/>
     </DataPropertyDomain>
     <DataPropertyRange>
-        <DataProperty IRI="#KA000420"/>
+        <DataProperty IRI="#isDefaultValue"/>
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <AnnotationAssertion>
@@ -579,16 +579,6 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#HumanName</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">HumanName</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#KA000419</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDefaultDefinition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#KA000420</IRI>
-        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isDefaultValue</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -722,6 +712,11 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#hasDefaultDefinition</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasDefaultDefinition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasPseudo</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasPseudo</Literal>
     </AnnotationAssertion>
@@ -739,6 +734,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#isDeActionOf</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isDeActionOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isDefaultValue</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">isDefaultValue</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
