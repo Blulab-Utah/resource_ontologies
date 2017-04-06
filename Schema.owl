@@ -30,10 +30,10 @@
         <Class IRI="#AllergyIntolerance"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#degree_of"/>
+        <ObjectProperty IRI="#property_of"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#property_of"/>
+        <ObjectProperty IRI="#degree_of"/>
     </Declaration>
     <Declaration>
         <Class IRI="#EpisodeType"/>
@@ -45,10 +45,10 @@
         <ObjectProperty IRI="#hasMethod"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#developmental_form_of"/>
+        <DataProperty IRI="#hasDeathDate"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasDeathDate"/>
+        <ObjectProperty IRI="#developmental_form_of"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SignSymptom"/>
@@ -63,10 +63,10 @@
         <ObjectProperty IRI="#hasDosage"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasGender"/>
+        <DataProperty IRI="#hasDateValue"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasDateValue"/>
+        <ObjectProperty IRI="#hasGender"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasMedicalRecordSummary"/>
@@ -75,10 +75,13 @@
         <ObjectProperty IRI="#interacts_with"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#complicates"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasEthnicity"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#complicates"/>
+        <NamedIndividual IRI="#one"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#uses"/>
@@ -96,10 +99,10 @@
         <ObjectProperty IRI="#hasPatient"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasMaxMinFlag"/>
+        <ObjectProperty IRI="#hasRelation"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasRelation"/>
+        <DataProperty IRI="#hasMaxMinFlag"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Episode"/>
@@ -123,13 +126,16 @@
         <ObjectProperty IRI="#hasExperiencer"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasCompoundArgument"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#hasFullName"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasCompoundArgument"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasDegree"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#three"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSemanticType"/>
@@ -234,22 +240,25 @@
         <DataProperty IRI="#hasLastOccurence"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#conceptual_part_of"/>
+        <NamedIndividual IRI="#thirty"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasEpisode"/>
+        <ObjectProperty IRI="#conceptual_part_of"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Anchor"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasEpisode"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAllergyIntoleranceCategory"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#dimension"/>
+        <ObjectProperty IRI="#carries_out"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#carries_out"/>
+        <NamedIndividual IRI="#dimension"/>
     </Declaration>
     <Declaration>
         <Class IRI="#DocumentAnnotation"/>
@@ -306,10 +315,10 @@
         <ObjectProperty IRI="#overlaps"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasContextualModality"/>
+        <ObjectProperty IRI="#hasMaritalStatus"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasMaritalStatus"/>
+        <ObjectProperty IRI="#hasContextualModality"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PhenotypeAnnotation"/>
@@ -357,19 +366,28 @@
         <ObjectProperty IRI="#hasCompoundArgument5"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#two"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasContextualAspect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#eight"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MentionAnnotation"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#eleven"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#has3DimensionValue"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasPreparationStatus"/>
+        <Class IRI="#Finding"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Finding"/>
+        <ObjectProperty IRI="#hasPreparationStatus"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasEncounter"/>
@@ -426,16 +444,19 @@
         <ObjectProperty IRI="#evaluation_of"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#result_of"/>
+        <NamedIndividual IRI="#six"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasDocumentAnnotation"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Event"/>
+        <ObjectProperty IRI="#result_of"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Annotation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasAgeOnset"/>
@@ -450,10 +471,10 @@
         <ObjectProperty IRI="#indicates"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#hasMentionAnnotation"/>
+        <ObjectProperty IRI="#diagnoses"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#diagnoses"/>
+        <ObjectProperty IRI="#hasMentionAnnotation"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasHighValue"/>
@@ -475,6 +496,9 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasDocumentID"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ten"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#traverses"/>
@@ -502,6 +526,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#issue_in"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nine"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasCertainty"/>
@@ -564,13 +591,19 @@
         <ObjectProperty IRI="#surrounds"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#practices"/>
-    </Declaration>
-    <Declaration>
         <DataProperty IRI="#asNeededBoolean"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#practices"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#hasAnnotationText"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#forty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#twelve"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasLastName"/>
@@ -588,7 +621,13 @@
         <Class IRI="#Entity"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#seven"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPolarity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#several"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasSection"/>
@@ -603,13 +642,19 @@
         <DataProperty IRI="#hasConditionCategory"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#hasFirstName"/>
+        <NamedIndividual IRI="#few"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#physically_related_to"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#hasFirstName"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#time"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#four"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#temporally_related_to"/>
@@ -621,16 +666,19 @@
         <ObjectProperty IRI="#hasSemanticModifier"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Procedure"/>
+        <ObjectProperty IRI="#assesses_effect_of"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#assesses_effect_of"/>
+        <Class IRI="#Procedure"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#isDeceased"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#hasNumeratorValue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fifty"/>
     </Declaration>
     <Declaration>
         <Class IRI="#PseudoAnchor"/>
@@ -645,7 +693,16 @@
         <ObjectProperty IRI="#hasModifier"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#twenty"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#begins_on"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#couple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#five"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#conceptually_related_to"/>
@@ -1617,12 +1674,52 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#couple"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Date"/>
         <NamedIndividual IRI="#date"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#DimensionalMeasurement"/>
         <NamedIndividual IRI="#dimension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#eight"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#eleven"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#few"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#fifty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#five"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#forty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#four"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#nine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#one"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
@@ -1637,9 +1734,50 @@
         <NamedIndividual IRI="#ratio"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#seven"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#several"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#six"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#ten"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#thirty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#three"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Time"/>
         <NamedIndividual IRI="#time"/>
     </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#twelve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#twenty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#Quantity"/>
+        <NamedIndividual IRI="#two"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#couple"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#forward"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
         <NamedIndividual IRI="#date"/>
@@ -1648,6 +1786,51 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
         <NamedIndividual IRI="#dimension"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#eight"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#eleven"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#few"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#forward"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#fifty"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#five"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#forty"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#four"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#nine"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#one"/>
         <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -1667,9 +1850,139 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#seven"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#several"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#forward"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#six"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#ten"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#thirty"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#three"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
         <NamedIndividual IRI="#time"/>
         <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
     </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#twelve"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#twenty"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#hasActionEn"/>
+        <NamedIndividual IRI="#two"/>
+        <NamedIndividual IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#bidirectional"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#couple"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#eight"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#eleven"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">11</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#fifty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#five"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#forty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#four"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#nine"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">9</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#one"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#seven"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#six"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#ten"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#thirty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#three"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#twelve"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#twenty"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hasQuantityValue"/>
+        <NamedIndividual IRI="#two"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#adjacent_to"/>
         <ObjectProperty IRI="#spatially_related_to"/>
@@ -3197,6 +3510,26 @@
         <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#couple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">couple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#couple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">couple of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#couple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#couple</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">couple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#regex"/>
         <IRI>#date</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">\b[12][09]\d{2}[01]\d{3}\b</Literal>
@@ -3227,9 +3560,234 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#eight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VIII</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#eight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">viii</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#eight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#eight</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eight</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eight</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#eleven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#eleven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#eleven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eleven</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#eleven</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#eleven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">eleven</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#few</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">few</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#few</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FEW</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#few</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#few</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">few</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#fifty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">L</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#fifty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fifty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#fifty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#fifty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">fifty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#five</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">V</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#five</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">v</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#five</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">five</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#five</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FIVE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#five</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">five</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#forty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XL</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#forty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#forty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#forty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">forty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IV</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">iv</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">four</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">FOUR</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#four</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">four</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#hasAnchor</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">hasAnchor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">IX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ix</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">NINE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#nine</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">nine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">I</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">i</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">one</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ONE</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#one</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">one</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#regex"/>
@@ -3262,6 +3820,161 @@
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#seven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VII</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#seven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vii</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#seven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seven</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#seven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#seven</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">seven</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#several</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">several</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#several</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#several</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">several</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">VI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">vi</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">six</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">SIX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#six</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">six</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">X</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">x</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TEN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">tens</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ten</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#thirty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XXX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#thirty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xxx</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#thirty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thirty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#thirty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#thirty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">thirty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#three</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">III</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#three</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">iii</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#three</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">three</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#three</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#three</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">three</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#regex"/>
         <IRI>#time</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">\b[012]\d{3}\b</Literal>
@@ -3275,6 +3988,86 @@
         <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
         <IRI>#time</IRI>
         <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#twelve</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XII</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#twelve</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xii</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#twelve</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">twelve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#twelve</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#twelve</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">twelve</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#twenty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">XX</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#twenty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">xx</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#twenty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">twenty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#twenty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#twenty</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">twenty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">II</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#abbreviation"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">ii</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#preferredTerm"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">two</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/TermMapping.owl#synonym"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">TWO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://blulab.chpc.utah.edu/ontologies/v2/ConText.owl#windowSize"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">10</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#two</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">two</Literal>
     </AnnotationAssertion>
 </Ontology>
 
